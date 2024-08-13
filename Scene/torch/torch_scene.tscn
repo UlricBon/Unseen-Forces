@@ -41,9 +41,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="TorchScene" type="StaticBody2D"]
-collision_layer = 0
-collision_mask = 0
+[node name="TorchScene" type="StaticBody2D" groups=["torch"]]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_v12qk")
 
 [node name="Area2D" type="Area2D" parent="."]

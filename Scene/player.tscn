@@ -1,8 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://cnrcsph655rdh"]
+[gd_scene load_steps=23 format=3 uid="uid://cnrcsph655rdh"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_gw1od"]
 [ext_resource type="Texture2D" uid="uid://ohdcjnnu6j5i" path="res://sprites/tallow_ss.png" id="2_g1o0y"]
 [ext_resource type="PackedScene" uid="uid://cgbq2lkg4x8s7" path="res://Scene/light/Light.tscn" id="3_y8ec2"]
+[ext_resource type="PackedScene" uid="uid://crpm3k5qyyogc" path="res://Scene/interact_radius/interact_radius.tscn" id="4_bebo5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_766jq"]
 atlas = ExtResource("2_g1o0y")
@@ -176,3 +177,8 @@ gravity = Vector2(0, -20)
 initial_velocity_min = 100.0
 initial_velocity_max = 100.0
 color = Color(0, 0.905882, 1, 1)
+
+[node name="interact_radius" parent="." instance=ExtResource("4_bebo5")]
+
+[connection signal="body_entered" from="interact_radius" to="." method="_on_interact_radius_body_entered"]
+[connection signal="interact" from="interact_radius" to="." method="_on_interact_radius_interact"]

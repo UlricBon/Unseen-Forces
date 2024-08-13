@@ -469,6 +469,7 @@ libraries = {
 autoplay = "Platgorm Move"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="TorchScene" parent="." instance=ExtResource("4_aacbl")]

@@ -10,6 +10,7 @@ func _ready():
 	sprite = $Sprite2D
 	animated_sprite.visible = false
 	light.light_scale = 0
+	#light_up()
 	
 	pass # Replace with function body.
 
@@ -20,12 +21,19 @@ func _process(delta):
 
 
 
-func _on_area_2d_body_entered(body):
-	if body is CharacterBody2D:
-		print(body)
-		animated_sprite.visible = true
-		animated_sprite.play()
-		sprite.visible = false
-		light.light_scale = 2
+#func _on_area_2d_body_entered(body):
+	#if body is CharacterBody2D:
+		##print(body)
+		#animated_sprite.visible = true
+		#animated_sprite.play()
+		#sprite.visible = false
+		#light.light_scale = 2
+	#
+	#pass # Replace with function body.
 	
-	pass # Replace with function body.
+func light_up():
+	animated_sprite.visible = true
+	animated_sprite.play()
+	sprite.visible = false
+	light.light_scale = 2
+	
