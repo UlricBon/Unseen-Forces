@@ -184,3 +184,5 @@ position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_hysa2")
 
 [node name="Light" parent="." instance=ExtResource("3_y8ec2")]
+position = Vector2(0, -1)
+texture_scale = 0.3

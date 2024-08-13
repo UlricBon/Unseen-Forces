@@ -1,0 +1,17 @@
+[gd_resource type="AnimatedTexture" load_steps=5 format=3 uid="uid://cm0rb4wka701j"]
+
+[ext_resource type="Texture2D" uid="uid://cwr1lh6u4ftw5" path="res://Scene/light/pixil-frame-0.png" id="1_xi7co"]
+[ext_resource type="Texture2D" uid="uid://dghyyjpsl8lmk" path="res://Scene/light/pixil-frame-1.png" id="2_yj3u7"]
+[ext_resource type="Texture2D" uid="uid://bdss60n2w1x71" path="res://Scene/light/pixil-frame-2.png" id="3_d54bn"]
+[ext_resource type="Texture2D" uid="uid://bx6o1krdbnxhn" path="res://Scene/light/pixil-frame-3.png" id="4_c5hg5"]
+
+[resource]
+frames = 4
+frame_0/texture = ExtResource("1_xi7co")
+frame_0/duration = 0.1
+frame_1/texture = ExtResource("2_yj3u7")
+frame_1/duration = 0.1
+frame_2/texture = ExtResource("3_d54bn")
+frame_2/duration = 0.1
+frame_3/texture = ExtResource("4_c5hg5")
+frame_3/duration = 0.1
