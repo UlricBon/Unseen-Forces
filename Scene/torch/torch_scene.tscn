@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cy2t1whtl6adu"]
+[gd_scene load_steps=11 format=3 uid="uid://cy2t1whtl6adu"]
 
 [ext_resource type="Script" path="res://Scene/torch/torch_scene.gd" id="1_v12qk"]
 [ext_resource type="Texture2D" uid="uid://8nlbq1tn4nle" path="res://Scene/torch/bonfire.png" id="2_kw313"]
 [ext_resource type="PackedScene" uid="uid://cgbq2lkg4x8s7" path="res://Scene/light/Light.tscn" id="3_vr87q"]
 [ext_resource type="Texture2D" uid="uid://d1masl6astlww" path="res://Scene/torch/bonfire_animated.png" id="4_csj88"]
+[ext_resource type="AudioStream" uid="uid://d0xy2ebenkanr" path="res://sounds/fire_start.mp3" id="5_wtg25"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tsqxx"]
 
@@ -67,5 +68,8 @@ scale = Vector2(0.114583, 0.114583)
 sprite_frames = SubResource("SpriteFrames_jtbpy")
 animation = &"torch_animated"
 frame_progress = 0.13513
+
+[node name="fire_start" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_wtg25")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

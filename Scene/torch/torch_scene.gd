@@ -3,6 +3,7 @@ extends StaticBody2D
 var light
 var animated_sprite
 var sprite
+@onready var fire_start = $fire_start
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	light = $Light
@@ -34,6 +35,7 @@ func _process(delta):
 func light_up():
 	animated_sprite.visible = true
 	animated_sprite.play()
+	fire_start.play()
 	sprite.visible = false
 	light.light_scale = 2
 	
