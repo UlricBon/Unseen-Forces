@@ -1,8 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://cgbq2lkg4x8s7"]
 
-[ext_resource type="Texture2D" uid="uid://eevq1w06yyjr" path="res://Scene/light/fig3.jpg" id="1_4ibxw"]
+[ext_resource type="Texture2D" uid="uid://bx6o1krdbnxhn" path="res://Scene/light/pixil-frame-3.png" id="1_wgvxp"]
 
 [node name="Light" type="PointLight2D"]
-energy = 0.5
+position = Vector2(0, 14)
 blend_mode = 2
-texture = ExtResource("1_4ibxw")
+shadow_enabled = true
+texture = ExtResource("1_wgvxp")
