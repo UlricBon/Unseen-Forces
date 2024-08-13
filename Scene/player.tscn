@@ -1,7 +1,8 @@
-[gd_scene load_steps=25 format=3 uid="uid://cnrcsph655rdh"]
+[gd_scene load_steps=26 format=3 uid="uid://cnrcsph655rdh"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_gw1od"]
 [ext_resource type="Texture2D" uid="uid://bw11rhh3y1cfm" path="res://sprites/knight.png" id="1_pld8v"]
+[ext_resource type="PackedScene" uid="uid://cgbq2lkg4x8s7" path="res://Scene/light/Light.tscn" id="3_y8ec2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e83dh"]
 atlas = ExtResource("1_pld8v")
@@ -181,3 +182,5 @@ frame_progress = 0.168799
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_hysa2")
+
+[node name="Light" parent="." instance=ExtResource("3_y8ec2")]
