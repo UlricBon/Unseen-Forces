@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cy2t1whtl6adu"]
+
+[ext_resource type="Script" path="res://Scene/torch/torch_scene.gd" id="1_v12qk"]
+[ext_resource type="Texture2D" uid="uid://8nlbq1tn4nle" path="res://sprites/bonfire.png" id="2_r16kw"]
+[ext_resource type="PackedScene" uid="uid://cgbq2lkg4x8s7" path="res://Scene/light/Light.tscn" id="3_vr87q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsqxx"]
+
+[node name="TorchScene" type="StaticBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_v12qk")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_tsqxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.111979, 0.111979)
+texture = ExtResource("2_r16kw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_tsqxx")
+
+[node name="Light" parent="." instance=ExtResource("3_vr87q")]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
