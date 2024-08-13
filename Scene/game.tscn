@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpommx0fwi0qf"]
+[gd_scene load_steps=10 format=3 uid="uid://dpommx0fwi0qf"]
 
 [ext_resource type="PackedScene" uid="uid://cnrcsph655rdh" path="res://Scene/player.tscn" id="1_t0yft"]
 [ext_resource type="Texture2D" uid="uid://ckc1dmwloeqyt" path="res://sprites/world_tileset.png" id="2_dcd4n"]
 [ext_resource type="PackedScene" uid="uid://bvsvxyohlwgtk" path="res://Scene/platform.tscn" id="3_kpi5v"]
+[ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="4_aacbl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iiwwb"]
 texture = ExtResource("2_dcd4n")
@@ -466,3 +467,6 @@ autoplay = "Platgorm Move"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
+
+[node name="TorchScene" parent="." instance=ExtResource("4_aacbl")]
+position = Vector2(-198, -91)
