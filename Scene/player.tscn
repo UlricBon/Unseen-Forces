@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://cnrcsph655rdh"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_gw1od"]
-[ext_resource type="Texture2D" uid="uid://ohdcjnnu6j5i" path="res://sprites/tallow_ss.png" id="2_g1o0y"]
+[ext_resource type="Texture2D" uid="uid://1lpg5e5fuq11" path="res://sprites/tallow_ss.png" id="2_g1o0y"]
 [ext_resource type="PackedScene" uid="uid://cgbq2lkg4x8s7" path="res://Scene/light/Light.tscn" id="3_y8ec2"]
 [ext_resource type="PackedScene" uid="uid://crpm3k5qyyogc" path="res://Scene/interact_radius/interact_radius.tscn" id="4_bebo5"]
 
@@ -164,6 +164,7 @@ shape = SubResource("RectangleShape2D_jyoh2")
 
 [node name="Light" parent="." instance=ExtResource("3_y8ec2")]
 position = Vector2(0, 18)
+offset = Vector2(0, 1)
 texture_scale = 0.3
 light_scale = 1.2
 
