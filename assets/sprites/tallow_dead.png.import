@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q3if0057w7tr"
-path="res://.godot/imported/posporo.png-8549240cc7c4cb78503fe8d2e6f44829.ctex"
+uid="uid://cc82xvbdmgnco"
+path="res://.godot/imported/tallow_dead.png-c5b1edf5b86c621bb306747f9eb1e4cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/posporo.png"
-dest_files=["res://.godot/imported/posporo.png-8549240cc7c4cb78503fe8d2e6f44829.ctex"]
+source_file="res://assets/sprites/tallow_dead.png"
+dest_files=["res://.godot/imported/tallow_dead.png-c5b1edf5b86c621bb306747f9eb1e4cf.ctex"]
 
 [params]
 

@@ -4,11 +4,13 @@ extends CharacterBody2D
 var SPEED = 100.0
 const JUMP_VELOCITY = -250.0
 @onready var animated_sprite_2d = $AnimatedSprite2D
-@onready var interact_radius = $interact_radius
 @onready var light = $Light
+@onready var cpu_particles_2d = $CPUParticles2D
 @onready var cpu_particles_2d_2 = $CPUParticles2D2
-@onready var timer_death = $TimerDeath
+@onready var cpu_particles_2d_3 = $CPUParticles2D3
 
+const MAXFUEL = 5000
+var FUEL = 5000
 var lightBool = false
 var playerDeath = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -40,6 +42,7 @@ func _physics_process(delta):
 		cpu_particles_2d_2.emitting = true
 		
 	if lightBool:
+		lightBool = true
 		light.light_scale *= 1.01
 		light.offset.y *= 1.0175
 		if is_on_floor():
@@ -72,11 +75,11 @@ func _physics_process(delta):
 func _input( event ):
 	if event.is_action_pressed("Interact") and event.is_pressed():
 		lightBool = true
-		interact_radius.start_time()
+		cpu_particles_2d_3.emitting = true
 		SPEED = 150
 	elif event.is_action_released("Interact"):
 		lightBool = false
-		interact_radius.stop_time()
+		cpu_particles_2d_3.emitting = false
 		SPEED = 100
 #var interact_object
 
@@ -104,6 +107,3 @@ func _on_interact_radius_area_exited(area):
 	interact_object = null
 	pass # Replace with function body.
 
-
-func _on_kill_zone_body_entered(body):
-	pass # Replace with function body.

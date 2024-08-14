@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cafs3g7b7tsbj" path="res://Scene/interact_radius/pbar-yellow.jpg" id="3_nampa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aa5fl"]
+radius = 9.0
 
 [node name="interact_radius" type="Area2D"]
 collision_layer = 7
@@ -20,14 +21,16 @@ wait_time = 5.0
 one_shot = true
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+z_index = 1
 offset_left = -17.0
 offset_top = -4.0
-offset_right = 33.0
+offset_right = 15.0
 offset_bottom = 20.0
 max_value = 5.0
+step = 0.1
 value = 5.0
-fill_mode = 3
-texture_under = ExtResource("2_netuc")
-texture_progress = ExtResource("3_nampa")
+fill_mode = 1
+texture_under = ExtResource("3_nampa")
+texture_progress = ExtResource("2_netuc")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
