@@ -290,10 +290,9 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="Environment" id="Environment_fpivq"]
+[sub_resource type="Environment" id="Environment_u8rlu"]
 background_mode = 3
 glow_enabled = true
-glow_strength = 0.8
 glow_blend_mode = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyoh2"]
@@ -310,14 +309,14 @@ collision_layer = 2
 script = ExtResource("1_gw1od")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-self_modulate = Color(2, 3, 3, 1)
+self_modulate = Color(3, 3, 3, 1)
 sprite_frames = SubResource("SpriteFrames_ifotu")
 animation = &"Idle"
 autoplay = "Lit Up Running"
 frame_progress = 0.929205
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_fpivq")
+environment = SubResource("Environment_u8rlu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 9)
