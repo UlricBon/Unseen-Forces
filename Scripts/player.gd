@@ -62,11 +62,17 @@ func _on_interact_radius_body_entered(body):
 	pass # Replace with function body.
 
 func _on_interact_radius_interact():
-	interact_object.light_up()
+	if interact_object:
+		interact_object.light_up()
 	pass # Replace with function body.
 
 
 func _on_interact_radius_area_entered(area):
 	print(area)
 	interact_object = area
+	pass # Replace with function body.
+
+
+func _on_interact_radius_area_exited(area):
+	interact_object = null
 	pass # Replace with function body.
