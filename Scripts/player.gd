@@ -36,7 +36,7 @@ func _physics_process(delta):
 	if playerDeath:
 		animated_sprite_2d.visible = false
 		light.visible = false
-		cpu_particles_2d_2.initial_velocity_min = velocity.x
+		cpu_particles_2d_2.initial_velocity_max = velocity.x*1.5
 		cpu_particles_2d_2.emitting = true
 		
 	if lightBool:

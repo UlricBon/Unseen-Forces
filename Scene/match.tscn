@@ -90,7 +90,7 @@ script = ExtResource("1_rrcpg")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_r2wi6")
 autoplay = "default"
-frame_progress = 0.939342
+frame_progress = 0.895474
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 1)

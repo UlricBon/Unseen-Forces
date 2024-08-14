@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://rw8v4876e178"]
+
+[ext_resource type="PackedScene" uid="uid://cc4nn2j4odg13" path="res://Scene/kill_zone.tscn" id="1_m8cw8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x4hdm"]
+size = Vector2(12, 11)
+
+[node name="Spike" type="Node2D"]
+position = Vector2(15, 9)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="KillZone" parent="." instance=ExtResource("1_m8cw8")]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(3, 7.5)
+shape = SubResource("RectangleShape2D_x4hdm")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dpommx0fwi0qf"]
+[gd_scene load_steps=16 format=3 uid="uid://dpommx0fwi0qf"]
 
 [ext_resource type="PackedScene" uid="uid://cnrcsph655rdh" path="res://Scene/player.tscn" id="1_t0yft"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="1_wut5m"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="4_aacbl"]
 [ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="5_c75pg"]
 [ext_resource type="PackedScene" uid="uid://dig3meigja8lo" path="res://Scene/enemy.tscn" id="7_4sao0"]
+[ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="9_sw435"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iiwwb"]
 texture = ExtResource("2_dcd4n")
@@ -1428,3 +1429,6 @@ position = Vector2(-57, -82)
 
 [node name="Enemy" parent="." instance=ExtResource("7_4sao0")]
 position = Vector2(-141, -125)
+
+[node name="Spike" parent="." instance=ExtResource("9_sw435")]
+position = Vector2(-58, -126)

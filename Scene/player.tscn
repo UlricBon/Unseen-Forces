@@ -198,9 +198,10 @@ amount = 1
 one_shot = true
 speed_scale = 0.8
 texture = ExtResource("5_uv515")
+particle_flag_align_y = true
 direction = Vector2(0, 200)
-spread = 1.0
-angular_velocity_max = 3.0
+angular_velocity_min = 10.0
+angular_velocity_max = 10.0
 angular_velocity_curve = SubResource("Curve_8mqkm")
 
 [connection signal="area_entered" from="interact_radius" to="." method="_on_interact_radius_area_entered"]
