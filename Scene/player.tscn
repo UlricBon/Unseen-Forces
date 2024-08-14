@@ -1,8 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://cnrcsph655rdh"]
+[gd_scene load_steps=23 format=3 uid="uid://cnrcsph655rdh"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_gw1od"]
-[ext_resource type="Texture2D" uid="uid://ohdcjnnu6j5i" path="res://sprites/tallow_ss.png" id="2_g1o0y"]
+[ext_resource type="Texture2D" uid="uid://1lpg5e5fuq11" path="res://sprites/tallow_ss.png" id="2_g1o0y"]
 [ext_resource type="PackedScene" uid="uid://cgbq2lkg4x8s7" path="res://Scene/light/Light.tscn" id="3_y8ec2"]
+[ext_resource type="PackedScene" uid="uid://crpm3k5qyyogc" path="res://Scene/interact_radius/interact_radius.tscn" id="4_bebo5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_766jq"]
 atlas = ExtResource("2_g1o0y")
@@ -148,24 +149,28 @@ animations = [{
 size = Vector2(15, 14)
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_gw1od")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ifotu")
-animation = &"Idle"
+animation = &"Lit Up Running"
 autoplay = "Lit Up Running"
-frame_progress = 0.103206
+frame_progress = 0.988691
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 9)
 shape = SubResource("RectangleShape2D_jyoh2")
 
 [node name="Light" parent="." instance=ExtResource("3_y8ec2")]
+position = Vector2(0, 18)
+offset = Vector2(0, 1)
 texture_scale = 0.3
+light_scale = 1.2
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 position = Vector2(0, -4.76)
-speed_scale = 0.2
+speed_scale = 0.5
 explosiveness = 0.5
 randomness = 0.5
 emission_shape = 1
@@ -176,3 +181,12 @@ gravity = Vector2(0, -20)
 initial_velocity_min = 100.0
 initial_velocity_max = 100.0
 color = Color(0, 0.905882, 1, 1)
+
+[node name="interact_radius" parent="." instance=ExtResource("4_bebo5")]
+collision_layer = 15
+collision_mask = 15
+
+[connection signal="area_entered" from="interact_radius" to="." method="_on_interact_radius_area_entered"]
+[connection signal="area_exited" from="interact_radius" to="." method="_on_interact_radius_area_exited"]
+[connection signal="body_entered" from="interact_radius" to="." method="_on_interact_radius_body_entered"]
+[connection signal="interact" from="interact_radius" to="." method="_on_interact_radius_interact"]

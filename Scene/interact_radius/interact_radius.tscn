@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://crpm3k5qyyogc"]
+
+[ext_resource type="Script" path="res://Scene/interact_radius/interact_radius.gd" id="1_2xb3l"]
+[ext_resource type="Texture2D" uid="uid://bt1fsqtjiskpx" path="res://Scene/interact_radius/pbar-white.jpg" id="2_netuc"]
+[ext_resource type="Texture2D" uid="uid://cafs3g7b7tsbj" path="res://Scene/interact_radius/pbar-yellow.jpg" id="3_nampa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aa5fl"]
+
+[node name="interact_radius" type="Area2D"]
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("1_2xb3l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_aa5fl")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = -17.0
+offset_top = -4.0
+offset_right = 33.0
+offset_bottom = 20.0
+max_value = 5.0
+value = 5.0
+fill_mode = 3
+texture_under = ExtResource("2_netuc")
+texture_progress = ExtResource("3_nampa")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
