@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fxp7bllqpnai"
-path="res://.godot/imported/newPosporo.png-2c55b6a46ac79f77d4afc32c3b231615.ctex"
+path="res://.godot/imported/newPosporo.png-9c9dcb495aaf95593561cfc3d5e037be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/newPosporo.png"
-dest_files=["res://.godot/imported/newPosporo.png-2c55b6a46ac79f77d4afc32c3b231615.ctex"]
+source_file="res://assets/sprites/newPosporo.png"
+dest_files=["res://.godot/imported/newPosporo.png-9c9dcb495aaf95593561cfc3d5e037be.ctex"]
 
 [params]
 

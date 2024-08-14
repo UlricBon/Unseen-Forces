@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://cnrcsph655rdh"]
+[gd_scene load_steps=25 format=3 uid="uid://cnrcsph655rdh"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_gw1od"]
-[ext_resource type="Texture2D" uid="uid://1lpg5e5fuq11" path="res://sprites/tallow_ss.png" id="2_g1o0y"]
+[ext_resource type="Texture2D" uid="uid://1lpg5e5fuq11" path="res://assets/sprites/tallow_ss.png" id="2_g1o0y"]
 [ext_resource type="PackedScene" uid="uid://cgbq2lkg4x8s7" path="res://Scene/light/Light.tscn" id="3_y8ec2"]
 [ext_resource type="PackedScene" uid="uid://crpm3k5qyyogc" path="res://Scene/interact_radius/interact_radius.tscn" id="4_bebo5"]
+[ext_resource type="Texture2D" uid="uid://q3if0057w7tr" path="res://assets/sprites/posporo.png" id="5_uv515"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_766jq"]
 atlas = ExtResource("2_g1o0y")
@@ -148,15 +149,20 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyoh2"]
 size = Vector2(15, 14)
 
+[sub_resource type="Curve" id="Curve_8mqkm"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.5, 360), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_gw1od")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ifotu")
-animation = &"Lit Up Running"
+animation = &"Idle"
 autoplay = "Lit Up Running"
-frame_progress = 0.988691
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 9)
@@ -185,6 +191,17 @@ color = Color(0, 0.905882, 1, 1)
 [node name="interact_radius" parent="." instance=ExtResource("4_bebo5")]
 collision_layer = 15
 collision_mask = 15
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 1
+one_shot = true
+speed_scale = 0.8
+texture = ExtResource("5_uv515")
+direction = Vector2(0, 200)
+spread = 1.0
+angular_velocity_max = 3.0
+angular_velocity_curve = SubResource("Curve_8mqkm")
 
 [connection signal="area_entered" from="interact_radius" to="." method="_on_interact_radius_area_entered"]
 [connection signal="area_exited" from="interact_radius" to="." method="_on_interact_radius_area_exited"]

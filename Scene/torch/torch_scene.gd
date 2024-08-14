@@ -20,14 +20,14 @@ func _process(delta):
 
 
 #
-#func _on_body_entered(body):
-	#
-	#if body is CharacterBody2D:
-		#print(body)
-		#animated_sprite.visible = true
-		#animated_sprite.play()
-		#sprite.visible = false
-		#light.light_scale = 2
+func _on_body_entered(body):
+	
+	if body is CharacterBody2D:
+		print(body)
+		animated_sprite.visible = true
+		animated_sprite.play()
+		sprite.visible = false
+		light.light_scale = 2
 		
 func light_up():
 	animated_sprite.visible = true

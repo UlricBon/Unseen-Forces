@@ -6,7 +6,11 @@ const JUMP_VELOCITY = -250.0
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var interact_radius = $interact_radius
 @onready var light = $Light
+@onready var cpu_particles_2d_2 = $CPUParticles2D2
+@onready var timer_death = $TimerDeath
+
 var lightBool = false
+var playerDeath = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -16,6 +20,7 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	
 	
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
@@ -28,6 +33,12 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("Left", "Right")
 	
+	if playerDeath:
+		animated_sprite_2d.visible = false
+		light.visible = false
+		cpu_particles_2d_2.initial_velocity_min = velocity.x
+		cpu_particles_2d_2.emitting = true
+		
 	if lightBool:
 		light.light_scale *= 1.01
 		light.offset.y *= 1.0175
@@ -91,4 +102,8 @@ func _on_interact_radius_area_entered(area):
 
 func _on_interact_radius_area_exited(area):
 	interact_object = null
+	pass # Replace with function body.
+
+
+func _on_kill_zone_body_entered(body):
 	pass # Replace with function body.
