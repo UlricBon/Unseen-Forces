@@ -64,3 +64,9 @@ func _on_interact_radius_body_entered(body):
 func _on_interact_radius_interact():
 	interact_object.light_up()
 	pass # Replace with function body.
+
+
+func _on_interact_radius_area_entered(area):
+	print(area)
+	interact_object = area
+	pass # Replace with function body.
