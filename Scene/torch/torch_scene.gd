@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends Area2D
 
 var light
 var animated_sprite
@@ -20,12 +20,11 @@ func _process(delta):
 
 
 
-func _on_area_2d_body_entered(body):
+func _on_body_entered(body):
+	
 	if body is CharacterBody2D:
 		print(body)
 		animated_sprite.visible = true
 		animated_sprite.play()
 		sprite.visible = false
 		light.light_scale = 2
-	
-	pass # Replace with function body.
