@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="6_sm4ak"]
 [ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="7_pevpc"]
 [ext_resource type="PackedScene" uid="uid://dig3meigja8lo" path="res://Scene/enemy.tscn" id="8_ukb6j"]
-[ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="9_erf36"]
+[ext_resource type="PackedScene" path="res://Scene/enemy_slow.tscn" id="9_erf36"]
 [ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="10_18cgs"]
 [ext_resource type="Script" path="res://Scripts/FuelBar.gd" id="11_xs7kv"]
 [ext_resource type="Texture2D" uid="uid://dtr433juu3hqd" path="res://assets/sprites/pbar.png" id="12_kvi3q"]
@@ -1589,8 +1589,8 @@ player = NodePath("../Player")
 visible = false
 offset_right = 40.0
 offset_bottom = 40.0
-max_value = 500.0
-value = 500.0
+max_value = 200.0
+value = 200.0
 texture_progress = ExtResource("12_kvi3q")
 metadata/_edit_use_anchors_ = true
 
