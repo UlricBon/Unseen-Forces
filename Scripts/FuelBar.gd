@@ -2,9 +2,9 @@ extends CanvasLayer
 
 @onready var interact_radius = $interact_radius
 @onready var pbar = $TextureProgressBar
-var score
 var burning = false
 @export var player : CharacterBody2D
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#score = get_parent().get_node("GameManager").score
@@ -21,11 +21,12 @@ func _process(delta):
 	pass
 
 func _input(event):
-	score = get_parent().get_node("GameManager").score
-	if event.is_action_pressed("Interact") and event.is_pressed() and score and pbar.value > 0:
+	if event.is_action_pressed("Interact") and event.is_pressed() and pbar.value > 0:
 		burning = true
+		pbar.visible = true
 		player.burning = true
 	elif event.is_action_released("Interact"):
 		burning = false
+		pbar.visible = false
 		player.burning = false
 

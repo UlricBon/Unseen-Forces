@@ -1,13 +1,13 @@
 extends Area2D
 
-@onready var torch_scene_2 = $"../TorchScene2"
-@onready var torch_scene = $"../TorchScene"
 @onready var collision_shape_2d = $CollisionShape2D
+@onready var game_manager_level_1 = $"../GameManagerLevel1"
 
 func _process(delta):
-	if torch_scene.isLit and torch_scene_2.isLit:
+	if game_manager_level_1.allTorchLit:
 		self.visible = true
 		collision_shape_2d.disabled = false
 
 func _on_body_entered(body):
 	print("you win!")
+	get_tree().change_scene_to_file("res://Scene/level2.tscn")

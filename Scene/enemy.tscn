@@ -91,3 +91,11 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
 position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_m6c4k")
+
+[node name="RayCastGroundRight" type="RayCast2D" parent="."]
+position = Vector2(7, 0)
+target_position = Vector2(0, 14)
+
+[node name="RayCastGroundLeft" type="RayCast2D" parent="."]
+position = Vector2(-7, 0)
+target_position = Vector2(0, 14)
