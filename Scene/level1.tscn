@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cgoq2nsnysa0v"]
+[gd_scene load_steps=18 format=3 uid="uid://srv5ix7s2ijj"]
 
 [ext_resource type="Script" path="res://Scripts/GameManagerLevel1.gd" id="1_bwpf3"]
 [ext_resource type="Texture2D" uid="uid://c4octcr4pxqhl" path="res://assets/tiles/wooden_tileset_2.png" id="2_8oltk"]
@@ -8,11 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="7_2hw4m"]
 [ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="8_6jxb7"]
 [ext_resource type="PackedScene" uid="uid://dig3meigja8lo" path="res://Scene/enemy.tscn" id="9_3e845"]
-[ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="10_4440h"]
+[ext_resource type="PackedScene" path="res://Scene/enemy_slow.tscn" id="10_4440h"]
 [ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="11_k7blg"]
 [ext_resource type="Script" path="res://Scripts/FuelBar.gd" id="12_23v3w"]
 [ext_resource type="Texture2D" uid="uid://dtr433juu3hqd" path="res://assets/sprites/pbar.png" id="13_dntf3"]
-[ext_resource type="PackedScene" uid="uid://uclpnqd1fit4" path="res://Scene/door.tscn" id="14_ec4qr"]
+[ext_resource type="PackedScene" uid="uid://bcq1ksrq0snmd" path="res://Scene/door.tscn" id="14_ec4qr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qvn2o"]
 resource_name = "platform_autotile"
@@ -1525,7 +1525,6 @@ layer_1/tile_data = PackedInt32Array(-786452, 262144, 2, -720916, 0, 1, -655380,
 position = Vector2(-280, -91)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Torch" type="Node" parent="."]
