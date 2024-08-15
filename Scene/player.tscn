@@ -1,10 +1,9 @@
-[gd_scene load_steps=46 format=3 uid="uid://cnrcsph655rdh"]
+[gd_scene load_steps=45 format=3 uid="uid://cnrcsph655rdh"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_gw1od"]
 [ext_resource type="Texture2D" uid="uid://1lpg5e5fuq11" path="res://assets/sprites/tallow_ss.png" id="2_g1o0y"]
 [ext_resource type="PackedScene" uid="uid://cgbq2lkg4x8s7" path="res://Scene/light/Light.tscn" id="3_y8ec2"]
 [ext_resource type="Texture2D" uid="uid://cc82xvbdmgnco" path="res://assets/sprites/tallow_dead.png" id="4_m8m8g"]
-[ext_resource type="AudioStream" uid="uid://bib7qugxfd077" path="res://assets/sfx/wood_footstep.wav" id="5_236yo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a64uq"]
 atlas = ExtResource("2_g1o0y")
@@ -380,12 +379,5 @@ angular_velocity_curve = SubResource("Curve_8mqkm")
 [node name="SlowTimer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
-
-[node name="FootstepAudioTimer" type="Timer" parent="."]
-one_shot = true
-
-[node name="FootstepSFX" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_236yo")
-volume_db = -5.0
 
 [connection signal="timeout" from="SlowTimer" to="." method="_on_slow_timer_timeout"]
