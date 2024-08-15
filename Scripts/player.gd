@@ -59,8 +59,8 @@ func _physics_process(delta):
 		
 	if lightBool:
 		lightBool = true
-		light.light_scale *= 1.015
-		light.offset.y *= 1.0175
+		light.light_scale *= 1.0125
+		light.offset.y *= 1.024
 		if is_on_floor():
 			if direction == 0:
 				animated_sprite_2d.play("Lit Up Idle")
