@@ -1508,22 +1508,6 @@ sources/1 = SubResource("TileSetAtlasSource_6r1ll")
 sources/2 = SubResource("TileSetAtlasSource_jid3h")
 sources/0 = SubResource("TileSetAtlasSource_qvn2o")
 
-[sub_resource type="Animation" id="Animation_ajmht"]
-resource_name = "platform"
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(17, -122), Vector2(17, -187)]
-}
-
 [sub_resource type="Animation" id="Animation_j5wwe"]
 length = 0.001
 tracks/0/type = "value"
@@ -1551,6 +1535,22 @@ tracks/1/keys = {
 "values": [Vector2(-288, -166)]
 }
 
+[sub_resource type="Animation" id="Animation_ajmht"]
+resource_name = "platform"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17, -122), Vector2(17, -187)]
+}
+
 [sub_resource type="Animation" id="Animation_npbd3"]
 resource_name = "platform2"
 length = 1.5
@@ -1568,23 +1568,6 @@ tracks/0/keys = {
 "values": [Vector2(-95, -157), Vector2(-223, -157)]
 }
 
-[sub_resource type="Animation" id="Animation_ib0ca"]
-resource_name = "platform4"
-length = 1.2
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-127, -221), Vector2(-223, -221)]
-}
-
 [sub_resource type="Animation" id="Animation_3ov0x"]
 resource_name = "platform3"
 length = 1.2
@@ -1600,6 +1583,23 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-288, -166), Vector2(-288, -253)]
+}
+
+[sub_resource type="Animation" id="Animation_ib0ca"]
+resource_name = "platform4"
+length = 1.2
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-127, -221), Vector2(-223, -221)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4vu8w"]
@@ -1688,7 +1688,6 @@ texture_progress = ExtResource("13_pb56s")
 metadata/_edit_use_anchors_ = true
 
 [node name="Door" parent="." instance=ExtResource("13_urous")]
-visible = true
 position = Vector2(65, -219)
 collision_mask = 2
 script = ExtResource("14_madu2")

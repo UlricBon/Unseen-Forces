@@ -10,4 +10,7 @@ func _process(delta):
 
 func _on_body_entered(body):
 	print("you win!")
+	call_deferred("_change_scene")
+
+func _change_scene():
 	get_tree().change_scene_to_file("res://Scene/level2.tscn")

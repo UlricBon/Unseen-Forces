@@ -1540,7 +1540,7 @@ position = Vector2(370, 101)
 position = Vector2(37, 37)
 
 [node name="TorchScene4" parent="Torch" instance=ExtResource("7_2hw4m")]
-position = Vector2(236, 21)
+position = Vector2(279, 21)
 
 [node name="Match" parent="." instance=ExtResource("8_6jxb7")]
 position = Vector2(171, -98)
