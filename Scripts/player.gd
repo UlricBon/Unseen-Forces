@@ -22,6 +22,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var interact_object
 
+var burning = false
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -29,6 +31,9 @@ func _physics_process(delta):
 		
 	if playerSlow:
 		SPEED = 50
+	
+	if burning:
+		print("plyaer is bunring")
 	
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
@@ -56,12 +61,14 @@ func _physics_process(delta):
 			if direction == 0:
 				animated_sprite_2d.play("Lit Up Idle")
 			else:
+				play_footsteps()
 				animated_sprite_2d.play("Lit Up Running")
 	else:
 		if is_on_floor():
 			if direction == 0:
 				animated_sprite_2d.play("Idle")
 			else:
+				play_footsteps()
 				animated_sprite_2d.play("Running")
 		light.light_scale = 1
 		light.offset.y = 1
@@ -80,11 +87,12 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func _input( event ):
-	if event.is_action_pressed("Interact") and event.is_pressed():
+	
+	if event.is_action_pressed("Interact") and event.is_pressed() and burning:
 		lightBool = true
 		cpu_particles_2d_3.emitting = true
 		SPEED = 150
-	elif event.is_action_released("Interact"):
+	elif event.is_action_released("Interact") || !burning:
 		lightBool = false
 		cpu_particles_2d_3.emitting = false
 		SPEED = 100
@@ -113,6 +121,13 @@ func _on_interact_radius_area_entered(area):
 func _on_interact_radius_area_exited(area):
 	interact_object = null
 	pass # Replace with function body.
+	
+# Function for playing footstep audio
+func play_footsteps():
+	if $FootstepAudioTimer.time_left <= 0:
+		$FootstepSFX.pitch_scale = randf_range(0.8, 1.2)
+		$FootstepSFX.play()
+		$FootstepAudioTimer.start()
 
 func _on_slow_timer_timeout():
 	print("stopppp")
