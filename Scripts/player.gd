@@ -131,7 +131,7 @@ func play_footsteps():
 		if burning:
 			$FootstepAudioTimer.start(0.2)
 		else:
-			$FootstepAudioTimer.start(0.25)
+			$FootstepAudioTimer.start(0.3)
 		
 func _on_slow_timer_timeout():
 	print("stopppp")
