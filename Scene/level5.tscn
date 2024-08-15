@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="7_8i2kt"]
 [ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="8_xvan2"]
 [ext_resource type="PackedScene" uid="uid://dig3meigja8lo" path="res://Scene/enemy.tscn" id="9_evbm2"]
-[ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="10_rdw6u"]
+[ext_resource type="PackedScene" path="res://Scene/enemy_slow.tscn" id="10_rdw6u"]
 [ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="11_2ovdx"]
 [ext_resource type="Script" path="res://Scripts/FuelBar.gd" id="12_hypii"]
 [ext_resource type="Texture2D" uid="uid://dtr433juu3hqd" path="res://assets/sprites/pbar.png" id="13_pb56s"]

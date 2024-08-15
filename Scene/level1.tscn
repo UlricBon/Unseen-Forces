@@ -1502,7 +1502,7 @@ sources/1 = SubResource("TileSetAtlasSource_6r1ll")
 sources/2 = SubResource("TileSetAtlasSource_jid3h")
 sources/0 = SubResource("TileSetAtlasSource_qvn2o")
 
-[node name="Game" type="Node2D"]
+[node name="Game2" type="Node2D"]
 position = Vector2(303, 257)
 
 [node name="GameManagerLevel1" type="Node" parent="."]
