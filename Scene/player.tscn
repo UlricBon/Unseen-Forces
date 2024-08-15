@@ -1,10 +1,9 @@
-[gd_scene load_steps=46 format=3 uid="uid://cnrcsph655rdh"]
+[gd_scene load_steps=45 format=3 uid="uid://cnrcsph655rdh"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_gw1od"]
 [ext_resource type="Texture2D" uid="uid://1lpg5e5fuq11" path="res://assets/sprites/tallow_ss.png" id="2_g1o0y"]
 [ext_resource type="PackedScene" uid="uid://cgbq2lkg4x8s7" path="res://Scene/light/Light.tscn" id="3_y8ec2"]
 [ext_resource type="Texture2D" uid="uid://cc82xvbdmgnco" path="res://assets/sprites/tallow_dead.png" id="4_m8m8g"]
-[ext_resource type="PackedScene" uid="uid://crpm3k5qyyogc" path="res://Scene/interact_radius/interact_radius.tscn" id="5_3o6eg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a64uq"]
 atlas = ExtResource("2_g1o0y")
@@ -294,6 +293,7 @@ animations = [{
 [sub_resource type="Environment" id="Environment_u8rlu"]
 background_mode = 3
 glow_enabled = true
+glow_strength = 1.3
 glow_blend_mode = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyoh2"]
@@ -306,11 +306,12 @@ _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.5, 360), 0.0, 0.0, 0, 0, Vecto
 point_count = 3
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(-1, 4)
 collision_layer = 2
 script = ExtResource("1_gw1od")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-self_modulate = Color(3, 3, 3, 1)
+self_modulate = Color(2, 3, 3, 1)
 sprite_frames = SubResource("SpriteFrames_ifotu")
 animation = &"Idle"
 autoplay = "Lit Up Running"
@@ -360,7 +361,10 @@ initial_velocity_min = 100.0
 initial_velocity_max = 100.0
 color = Color(0, 0.905882, 1, 1)
 
-[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="CanvasLayer"]
+position = Vector2(-1, 4)
 emitting = false
 amount = 1
 one_shot = true
@@ -372,4 +376,8 @@ angular_velocity_min = 10.0
 angular_velocity_max = 10.0
 angular_velocity_curve = SubResource("Curve_8mqkm")
 
-[node name="interact_radius" parent="." instance=ExtResource("5_3o6eg")]
+[node name="SlowTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="SlowTimer" to="." method="_on_slow_timer_timeout"]
