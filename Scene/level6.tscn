@@ -1525,7 +1525,6 @@ layer_1/tile_data = PackedInt32Array(-786452, 196608, 1, -720916, 262144, 4, -65
 position = Vector2(-208, -177)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Torch" type="Node" parent="."]
@@ -1682,6 +1681,6 @@ texture_progress = ExtResource("12_fgqdv")
 metadata/_edit_use_anchors_ = true
 
 [node name="Door" parent="." instance=ExtResource("13_bksj8")]
-position = Vector2(-286, -60)
+position = Vector2(-282, -59)
 collision_mask = 2
 script = ExtResource("14_xfgpu")

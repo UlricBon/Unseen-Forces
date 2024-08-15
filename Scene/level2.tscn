@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bns8t6sabc3xn"]
+[gd_scene load_steps=17 format=3 uid="uid://bns8t6sabc3xn"]
 
 [ext_resource type="Script" path="res://Scripts/GameManagerLevel2.gd" id="1_fu6j1"]
 [ext_resource type="Texture2D" uid="uid://c4octcr4pxqhl" path="res://assets/tiles/wooden_tileset_2.png" id="2_uuasa"]
@@ -7,8 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cnrcsph655rdh" path="res://Scene/player.tscn" id="5_hur0p"]
 [ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="7_86vdf"]
 [ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="8_hsakw"]
-[ext_resource type="PackedScene" uid="uid://dig3meigja8lo" path="res://Scene/enemy.tscn" id="9_mhwv8"]
-[ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="10_sddfm"]
 [ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="11_r6lvj"]
 [ext_resource type="Script" path="res://Scripts/FuelBar.gd" id="12_bpakl"]
 [ext_resource type="PackedScene" uid="uid://uclpnqd1fit4" path="res://Scene/door.tscn" id="13_7bnxi"]
@@ -1526,7 +1524,6 @@ layer_1/tile_data = PackedInt32Array(-786452, 262144, 2, -720916, 0, 1, -655380,
 position = Vector2(-278, -229)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Torch" type="Node" parent="."]
@@ -1539,12 +1536,6 @@ position = Vector2(317, 37)
 
 [node name="TorchScene3" parent="Torch" instance=ExtResource("7_86vdf")]
 position = Vector2(165, 37)
-
-[node name="Enemy" parent="." instance=ExtResource("9_mhwv8")]
-position = Vector2(256, -223)
-
-[node name="EnemySlow" parent="." instance=ExtResource("10_sddfm")]
-position = Vector2(287, -179)
 
 [node name="Spikes" type="Node" parent="."]
 
