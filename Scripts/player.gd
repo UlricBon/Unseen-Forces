@@ -6,9 +6,11 @@ const JUMP_VELOCITY = -250.0
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var light = $Light
 @onready var cpu_particles_2d = $CPUParticles2D
-@onready var cpu_particles_2d_2 = $CPUParticles2D2
+@onready var cpu_particles_2d_2 = $CanvasLayer/CPUParticles2D2
 @onready var cpu_particles_2d_3 = $CPUParticles2D3
 @onready var slow_timer = $SlowTimer
+@onready var canvas_layer = $CanvasLayer
+
 
 const MAXFUEL = 5000
 var FUEL = 5000
@@ -42,6 +44,7 @@ func _physics_process(delta):
 	if playerDeath:
 		animated_sprite_2d.visible = false
 		light.visible = false
+		cpu_particles_2d_2.global_position = global_position
 		cpu_particles_2d_2.initial_velocity_max = velocity.x*1.5
 		cpu_particles_2d_2.emitting = true
 		
