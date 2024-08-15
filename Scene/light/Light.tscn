@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scene/light/Light.gd" id="2_h8eeb"]
 
 [node name="Light" type="PointLight2D"]
-energy = 0.4
+energy = 0.2
 blend_mode = 2
 texture = ExtResource("1_4ibxw")
 texture_scale = 0.2

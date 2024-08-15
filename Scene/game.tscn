@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ttna23xdkl5g" path="res://assets/tiles/wood_tileset.png" id="4_jv8ra"]
 [ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="5_c75pg"]
 [ext_resource type="PackedScene" uid="uid://dig3meigja8lo" path="res://Scene/enemy.tscn" id="7_4sao0"]
-[ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="8_6l8wv"]
+[ext_resource type="PackedScene" path="res://Scene/enemy_slow.tscn" id="8_6l8wv"]
 [ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="9_sw435"]
 [ext_resource type="Script" path="res://Scripts/FuelBar.gd" id="10_v55l1"]
 [ext_resource type="Texture2D" uid="uid://dtr433juu3hqd" path="res://assets/sprites/pbar.png" id="12_cvd55"]
@@ -1590,8 +1590,9 @@ position = Vector2(-70, -141)
 [node name="Spike" parent="." instance=ExtResource("9_sw435")]
 position = Vector2(-58, -126)
 
-[node name="FuelBar" type="CanvasLayer" parent="."]
+[node name="FuelBar" type="CanvasLayer" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("10_v55l1")
+player = NodePath("../Player")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="FuelBar"]
 offset_right = 40.0

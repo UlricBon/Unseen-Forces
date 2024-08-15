@@ -1,6 +1,6 @@
 extends Node
 
-var score = 0
+var score = 1
 
 func add_point():
 	score += 1
