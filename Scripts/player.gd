@@ -17,6 +17,7 @@ var FUEL = 5000
 var lightBool = false
 var playerDeath = false
 var playerSlow = false
+var buffered_jump = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -40,8 +41,15 @@ func _physics_process(delta):
 		print("plyaer is bunring")
 	
 	# Handle jump.
-	if Input.is_action_just_pressed("Jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	if is_on_floor():
+		if Input.is_action_just_pressed("Jump") or buffered_jump == true:
+			velocity.y = JUMP_VELOCITY
+			buffered_jump = false
+	else:
+		if Input.is_action_just_pressed("Jump"):
+			buffered_jump = true
+			$JumpBufferTimer.start()
+	#^^^ BINAGO KO TO LINAGYAN KO NG JUMP BUFFERING, PARA BAGO LUMAPAG MAKAKATALON AGAD SI PLAYER	
 		
 	if Input.is_action_just_pressed("Interact"):
 		pass
@@ -141,3 +149,8 @@ func _on_slow_timer_timeout():
 	print("stopppp")
 	playerSlow = false
 	SPEED = 100
+
+
+func _on_jump_buffer_timer_timeout():
+	buffered_jump = false
+	pass # Replace with function body.
