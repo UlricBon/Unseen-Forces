@@ -25,6 +25,9 @@ var interact_object
 
 var burning = false
 
+var coyote_time = 0.1
+var can_jump = false
+
 func _physics_process(delta):
 		
 	if Input.is_action_just_pressed("Retry"):
@@ -41,7 +44,12 @@ func _physics_process(delta):
 		print("plyaer is bunring")
 	
 	# Handle jump.
-	if is_on_floor():
+	if is_on_floor() and can_jump == false:
+		can_jump = true
+	elif can_jump == true and $CoyoteTimer.is_stopped():
+		$CoyoteTimer.start(coyote_time)
+	
+	if can_jump:
 		if Input.is_action_just_pressed("Jump") or buffered_jump == true:
 			velocity.y = JUMP_VELOCITY
 			buffered_jump = false
@@ -153,4 +161,9 @@ func _on_slow_timer_timeout():
 
 func _on_jump_buffer_timer_timeout():
 	buffered_jump = false
+	pass # Replace with function body.
+
+
+func _on_coyote_timer_timeout():
+	can_jump = false
 	pass # Replace with function body.
