@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://l54md4heenk7"]
+[gd_scene load_steps=16 format=3 uid="uid://l54md4heenk7"]
 
 [ext_resource type="Script" path="res://Scripts/match.gd" id="1_rrcpg"]
 [ext_resource type="Texture2D" uid="uid://ne1nhtki2vom" path="res://assets/sprites/Match.png" id="2_ixjf5"]
@@ -83,17 +83,29 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x6rnd"]
 
+[sub_resource type="Environment" id="Environment_40v3w"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 4.22
+glow_strength = 1.2
+glow_blend_mode = 1
+glow_hdr_threshold = 0.0
+
 [node name="Match" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_rrcpg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+self_modulate = Color(2, 2, 2, 1)
 sprite_frames = SubResource("SpriteFrames_r2wi6")
 autoplay = "default"
 frame_progress = 0.895474
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 1)
+position = Vector2(2, 2)
 shape = SubResource("CircleShape2D_x6rnd")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_40v3w")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

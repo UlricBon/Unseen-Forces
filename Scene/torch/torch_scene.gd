@@ -1,5 +1,6 @@
 extends Area2D
 
+signal torch_lit
 var light
 var animated_sprite
 var sprite
@@ -26,6 +27,7 @@ func _on_body_entered(body):
 	if body is CharacterBody2D:
 		print(body)
 		isLit = true
+		emit_signal("torch_lit")
 		animated_sprite.visible = true
 		animated_sprite.play()
 		sprite.visible = false

@@ -25,6 +25,10 @@ var interact_object
 var burning = false
 
 func _physics_process(delta):
+		
+	if Input.is_action_just_pressed("Retry"):
+		print("retry")
+		get_tree().reload_current_scene()
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
