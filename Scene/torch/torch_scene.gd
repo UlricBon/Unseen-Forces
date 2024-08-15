@@ -3,6 +3,7 @@ extends Area2D
 var light
 var animated_sprite
 var sprite
+var isLit = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	light = $Light
@@ -24,6 +25,7 @@ func _on_body_entered(body):
 	
 	if body is CharacterBody2D:
 		print(body)
+		isLit = true
 		animated_sprite.visible = true
 		animated_sprite.play()
 		sprite.visible = false

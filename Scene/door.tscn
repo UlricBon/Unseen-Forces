@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://uclpnqd1fit4"]
+
+[ext_resource type="Script" path="res://Scripts/Door.gd" id="1_loht1"]
+[ext_resource type="Texture2D" uid="uid://cc82xvbdmgnco" path="res://assets/sprites/tallow_dead.png" id="2_gsrcx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p8bl0"]
+size = Vector2(17, 24)
+
+[node name="Door" type="Area2D"]
+visible = false
+script = ExtResource("1_loht1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -7)
+texture = ExtResource("2_gsrcx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -2)
+shape = SubResource("RectangleShape2D_p8bl0")
+disabled = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

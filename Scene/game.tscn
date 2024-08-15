@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dpommx0fwi0qf"]
+[gd_scene load_steps=22 format=3 uid="uid://dpommx0fwi0qf"]
 
 [ext_resource type="PackedScene" uid="uid://cnrcsph655rdh" path="res://Scene/player.tscn" id="1_t0yft"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="1_wut5m"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="9_sw435"]
 [ext_resource type="PackedScene" uid="uid://crpm3k5qyyogc" path="res://Scene/interact_radius/interact_radius.tscn" id="10_ry6ch"]
 [ext_resource type="Script" path="res://Scripts/FuelBar.gd" id="10_v55l1"]
+[ext_resource type="PackedScene" uid="uid://uclpnqd1fit4" path="res://Scene/door.tscn" id="14_r0d5a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qvn2o"]
 resource_name = "platform_autotile"
@@ -1573,10 +1574,14 @@ libraries = {
 autoplay = "Platgorm Move"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="TorchScene" parent="." instance=ExtResource("4_aacbl")]
 position = Vector2(-164, -76)
+
+[node name="TorchScene2" parent="." instance=ExtResource("4_aacbl")]
+position = Vector2(-274, -76)
 
 [node name="Match" parent="." instance=ExtResource("5_c75pg")]
 position = Vector2(-57, -82)
@@ -1596,3 +1601,7 @@ script = ExtResource("10_v55l1")
 [node name="interact_radius" parent="FuelBar" instance=ExtResource("10_ry6ch")]
 z_index = 5
 position = Vector2(26, 12)
+
+[node name="Door" parent="." instance=ExtResource("14_r0d5a")]
+position = Vector2(-216, -139)
+collision_mask = 2
