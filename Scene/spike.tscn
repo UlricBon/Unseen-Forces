@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cc4nn2j4odg13" path="res://Scene/kill_zone.tscn" id="1_m8cw8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x4hdm"]
-size = Vector2(12, 12)
+size = Vector2(16, 15)
 
 [node name="Spike" type="Node2D"]
 position = Vector2(15, 9)
@@ -17,5 +17,5 @@ texture = ExtResource("1_3epdu")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
-position = Vector2(3, 7)
+position = Vector2(3, 5.5)
 shape = SubResource("RectangleShape2D_x4hdm")

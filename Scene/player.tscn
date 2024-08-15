@@ -308,7 +308,6 @@ point_count = 3
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(-1, 4)
-scale = Vector2(1, 0.991453)
 collision_layer = 2
 script = ExtResource("1_gw1od")
 
@@ -389,4 +388,9 @@ one_shot = true
 stream = ExtResource("5_236yo")
 volume_db = -5.0
 
+[node name="JumpBufferTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [connection signal="timeout" from="SlowTimer" to="." method="_on_slow_timer_timeout"]
+[connection signal="timeout" from="JumpBufferTimer" to="." method="_on_jump_buffer_timer_timeout"]
