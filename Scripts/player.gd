@@ -8,11 +8,13 @@ const JUMP_VELOCITY = -250.0
 @onready var cpu_particles_2d = $CPUParticles2D
 @onready var cpu_particles_2d_2 = $CPUParticles2D2
 @onready var cpu_particles_2d_3 = $CPUParticles2D3
+@onready var slow_timer = $SlowTimer
 
 const MAXFUEL = 5000
 var FUEL = 5000
 var lightBool = false
 var playerDeath = false
+var playerSlow = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -22,7 +24,9 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-	
+		
+	if playerSlow:
+		SPEED = 50
 	
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
@@ -107,3 +111,7 @@ func _on_interact_radius_area_exited(area):
 	interact_object = null
 	pass # Replace with function body.
 
+func _on_slow_timer_timeout():
+	print("stopppp")
+	playerSlow = false
+	SPEED = 100
