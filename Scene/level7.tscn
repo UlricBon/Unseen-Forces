@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dwm8p4ccjebpv"]
+[gd_scene load_steps=25 format=3 uid="uid://dwm8p4ccjebpv"]
 
 [ext_resource type="Script" path="res://Scripts/GameManagerLevel7.gd" id="1_sps4y"]
 [ext_resource type="Texture2D" uid="uid://c4octcr4pxqhl" path="res://assets/tiles/wooden_tileset_2.png" id="2_7fgi6"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ttna23xdkl5g" path="res://assets/tiles/wood_tileset.png" id="4_ag8qc"]
 [ext_resource type="PackedScene" uid="uid://cnrcsph655rdh" path="res://Scene/player.tscn" id="5_llusx"]
 [ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="6_3x0q1"]
+[ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="7_evbsr"]
 [ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="10_nckog"]
 [ext_resource type="Script" path="res://Scripts/FuelBar.gd" id="11_krl0u"]
 [ext_resource type="Texture2D" uid="uid://dtr433juu3hqd" path="res://assets/sprites/pbar.png" id="12_87k72"]
@@ -1522,6 +1523,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_cls8n"]
 resource_name = "platform"
+length = 2.0
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1530,7 +1532,7 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0.5, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-31, -149), Vector2(-31, -221)]
@@ -1558,6 +1560,44 @@ _data = {
 "RESET": SubResource("Animation_4bm3o"),
 "platform": SubResource("Animation_cls8n"),
 "platform2": SubResource("Animation_qf6cc")
+}
+
+[sub_resource type="Animation" id="Animation_q5r68"]
+resource_name = "platform2"
+length = 2.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-63, -221), Vector2(-223, -221)]
+}
+
+[sub_resource type="Animation" id="Animation_ek8jx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-63, -221)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k1o5u"]
+_data = {
+"RESET": SubResource("Animation_ek8jx"),
+"platform2": SubResource("Animation_q5r68")
 }
 
 [node name="Game" type="Node2D"]
@@ -1621,7 +1661,6 @@ script = ExtResource("11_krl0u")
 player = NodePath("../Player")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="FuelBar"]
-visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 max_value = 200.0
@@ -1639,11 +1678,11 @@ libraries = {
 autoplay = "platform"
 
 [node name="Platform2" parent="." instance=ExtResource("15_5yydx")]
-position = Vector2(-31, -221)
+position = Vector2(-63, -221)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platform2"]
 libraries = {
-"": SubResource("AnimationLibrary_ayg5t")
+"": SubResource("AnimationLibrary_k1o5u")
 }
 autoplay = "platform2"
 
@@ -1651,3 +1690,6 @@ autoplay = "platform2"
 position = Vector2(64, -75)
 collision_mask = 2
 script = ExtResource("12_s58e5")
+
+[node name="Match" parent="." instance=ExtResource("7_evbsr")]
+position = Vector2(-120, -237)

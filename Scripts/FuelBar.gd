@@ -23,10 +23,8 @@ func _process(delta):
 func _input(event):
 	if event.is_action_pressed("Interact") and event.is_pressed() and pbar.value > 0:
 		burning = true
-		pbar.visible = true
 		player.burning = true
 	elif event.is_action_released("Interact"):
 		burning = false
-		pbar.visible = false
 		player.burning = false
 

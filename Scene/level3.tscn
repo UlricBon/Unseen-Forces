@@ -1506,7 +1506,7 @@ sources/1 = SubResource("TileSetAtlasSource_6r1ll")
 sources/2 = SubResource("TileSetAtlasSource_jid3h")
 sources/0 = SubResource("TileSetAtlasSource_qvn2o")
 
-[node name="Game2" type="Node2D"]
+[node name="Game3" type="Node2D"]
 position = Vector2(303, 257)
 
 [node name="GameManagerLevel3" type="Node" parent="."]
@@ -1525,6 +1525,7 @@ layer_1/tile_data = PackedInt32Array(-786452, 262144, 2, -720916, 262144, 1, -65
 position = Vector2(-278, -149)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Torch" type="Node" parent="."]
@@ -1591,7 +1592,6 @@ script = ExtResource("12_dycrs")
 player = NodePath("../Player")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="FuelBar"]
-visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 max_value = 200.0
