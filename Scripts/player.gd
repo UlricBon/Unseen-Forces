@@ -124,10 +124,15 @@ func _on_interact_radius_area_exited(area):
 	
 # Function for playing footstep audio
 func play_footsteps():
+	var wait_time = 0.25
 	if $FootstepAudioTimer.time_left <= 0:
-		$FootstepSFX.pitch_scale = randf_range(0.8, 1.2)
+		$FootstepSFX.pitch_scale = randf_range(1, 1.5)
 		$FootstepSFX.play()
-		$FootstepAudioTimer.start()
+		if burning:
+			$FootstepAudioTimer.start(0.2)
+		else:
+			$FootstepAudioTimer.start(0.25)
+		
 
 func _on_slow_timer_timeout():
 	print("stopppp")
