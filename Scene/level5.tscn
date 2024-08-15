@@ -1611,7 +1611,7 @@ _data = {
 "platform4": SubResource("Animation_ib0ca")
 }
 
-[node name="Game" type="Node2D"]
+[node name="Game2" type="Node2D"]
 position = Vector2(303, 257)
 
 [node name="GameManagerLevel5" type="Node" parent="."]
@@ -1630,7 +1630,6 @@ layer_1/tile_data = PackedInt32Array(-786452, 196608, 1, -720916, 196608, 1, -65
 position = Vector2(-277, -83)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Torch" type="Node" parent="."]
@@ -1682,13 +1681,13 @@ player = NodePath("../Player")
 visible = false
 offset_right = 40.0
 offset_bottom = 40.0
-max_value = 500.0
-value = 500.0
+max_value = 200.0
+value = 200.0
 texture_progress = ExtResource("13_pb56s")
 metadata/_edit_use_anchors_ = true
 
 [node name="Door" parent="." instance=ExtResource("13_urous")]
-position = Vector2(65, -219)
+position = Vector2(63, -219)
 collision_mask = 2
 script = ExtResource("14_madu2")
 

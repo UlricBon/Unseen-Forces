@@ -1,19 +1,16 @@
-[gd_scene load_steps=24 format=3 uid="uid://dwm8p4ccjebpv"]
+[gd_scene load_steps=21 format=3 uid="uid://dwm8p4ccjebpv"]
 
-[ext_resource type="Script" path="res://Scripts/GameManagerLevel6.gd" id="1_y66pq"]
+[ext_resource type="Script" path="res://Scripts/GameManagerLevel7.gd" id="1_sps4y"]
 [ext_resource type="Texture2D" uid="uid://c4octcr4pxqhl" path="res://assets/tiles/wooden_tileset_2.png" id="2_7fgi6"]
 [ext_resource type="Texture2D" uid="uid://bvaax6j0lf3q6" path="res://assets/tiles/wood_bg.png" id="3_nl2ls"]
 [ext_resource type="Texture2D" uid="uid://ttna23xdkl5g" path="res://assets/tiles/wood_tileset.png" id="4_ag8qc"]
 [ext_resource type="PackedScene" uid="uid://cnrcsph655rdh" path="res://Scene/player.tscn" id="5_llusx"]
 [ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="6_3x0q1"]
-[ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="7_evbsr"]
-[ext_resource type="PackedScene" uid="uid://dig3meigja8lo" path="res://Scene/enemy.tscn" id="8_7nre7"]
-[ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="9_oldef"]
 [ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="10_nckog"]
 [ext_resource type="Script" path="res://Scripts/FuelBar.gd" id="11_krl0u"]
 [ext_resource type="Texture2D" uid="uid://dtr433juu3hqd" path="res://assets/sprites/pbar.png" id="12_87k72"]
+[ext_resource type="Script" path="res://Scripts/Door7.gd" id="12_s58e5"]
 [ext_resource type="PackedScene" uid="uid://uclpnqd1fit4" path="res://Scene/door.tscn" id="13_gvqjr"]
-[ext_resource type="Script" path="res://Scripts/Door6.gd" id="14_d5u1b"]
 [ext_resource type="PackedScene" uid="uid://bvsvxyohlwgtk" path="res://Scene/platform.tscn" id="15_5yydx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qvn2o"]
@@ -1508,6 +1505,21 @@ sources/1 = SubResource("TileSetAtlasSource_6r1ll")
 sources/2 = SubResource("TileSetAtlasSource_jid3h")
 sources/0 = SubResource("TileSetAtlasSource_qvn2o")
 
+[sub_resource type="Animation" id="Animation_4bm3o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-31, -221)]
+}
+
 [sub_resource type="Animation" id="Animation_cls8n"]
 resource_name = "platform"
 loop_mode = 2
@@ -1522,21 +1534,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-31, -149), Vector2(-31, -221)]
-}
-
-[sub_resource type="Animation" id="Animation_4bm3o"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-31, -221)]
 }
 
 [sub_resource type="Animation" id="Animation_qf6cc"]
@@ -1566,8 +1563,8 @@ _data = {
 [node name="Game" type="Node2D"]
 position = Vector2(303, 257)
 
-[node name="GameManagerLevel6" type="Node" parent="."]
-script = ExtResource("1_y66pq")
+[node name="GameManagerLevel7" type="Node" parent="."]
+script = ExtResource("1_sps4y")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, -1)
@@ -1582,7 +1579,6 @@ layer_1/tile_data = PackedInt32Array(-786452, 262144, 1, -720916, 196608, 1, -65
 position = Vector2(-270, -162)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Torch" type="Node" parent="."]
@@ -1598,24 +1594,6 @@ position = Vector2(27, 21)
 
 [node name="TorchScene4" parent="Torch" instance=ExtResource("6_3x0q1")]
 position = Vector2(313, 21)
-
-[node name="Match" parent="." instance=ExtResource("7_evbsr")]
-position = Vector2(236, -135)
-
-[node name="Enemy" parent="." instance=ExtResource("8_7nre7")]
-position = Vector2(219, -101)
-
-[node name="EnemySlow" parent="." instance=ExtResource("9_oldef")]
-position = Vector2(254, -61)
-
-[node name="EnemySlow2" parent="." instance=ExtResource("9_oldef")]
-position = Vector2(189, -27)
-
-[node name="EnemySlow3" parent="." instance=ExtResource("9_oldef")]
-position = Vector2(126, -61)
-
-[node name="EnemySlow4" parent="." instance=ExtResource("9_oldef")]
-position = Vector2(319, -28)
 
 [node name="Spike51" parent="." instance=ExtResource("10_nckog")]
 position = Vector2(-234, -78)
@@ -1645,16 +1623,10 @@ player = NodePath("../Player")
 visible = false
 offset_right = 40.0
 offset_bottom = 40.0
-max_value = 500.0
-value = 500.0
+max_value = 200.0
+value = 200.0
 texture_progress = ExtResource("12_87k72")
 metadata/_edit_use_anchors_ = true
-
-[node name="Door" parent="." instance=ExtResource("13_gvqjr")]
-visible = true
-position = Vector2(71, -75)
-collision_mask = 2
-script = ExtResource("14_d5u1b")
 
 [node name="Platform" parent="." instance=ExtResource("15_5yydx")]
 position = Vector2(-31, -221)
@@ -1673,3 +1645,8 @@ libraries = {
 "": SubResource("AnimationLibrary_ayg5t")
 }
 autoplay = "platform2"
+
+[node name="Door" parent="." instance=ExtResource("13_gvqjr")]
+position = Vector2(64, -75)
+collision_mask = 2
+script = ExtResource("12_s58e5")
