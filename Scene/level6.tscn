@@ -1683,4 +1683,3 @@ collision_mask = 2
 script = ExtResource("14_xfgpu")
 
 [node name="Enemy" parent="." instance=ExtResource("13_if4oh")]
-position = Vector2(-24, -61)

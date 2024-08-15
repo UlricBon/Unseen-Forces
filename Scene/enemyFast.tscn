@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://cyq8pgxd3s6xs"]
 
-[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_qnhq1"]
+[ext_resource type="Script" path="res://Scripts/enemyFast.gd" id="1_1vhi4"]
 [ext_resource type="Texture2D" uid="uid://u8ub8x0x3m78" path="res://assets/sprites/slime_purple.png" id="2_7eeys"]
 [ext_resource type="PackedScene" uid="uid://cc4nn2j4odg13" path="res://Scene/kill_zone.tscn" id="3_ws36y"]
 
@@ -72,7 +72,7 @@ animations = [{
 size = Vector2(12, 12)
 
 [node name="Enemy" type="Node2D"]
-script = ExtResource("1_qnhq1")
+script = ExtResource("1_1vhi4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_67ott")

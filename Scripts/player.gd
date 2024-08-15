@@ -59,7 +59,7 @@ func _physics_process(delta):
 		
 	if lightBool:
 		lightBool = true
-		light.light_scale *= 1.01
+		light.light_scale *= 1.015
 		light.offset.y *= 1.0175
 		if is_on_floor():
 			if direction == 0:
