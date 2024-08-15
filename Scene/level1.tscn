@@ -1521,7 +1521,6 @@ layer_1/tile_data = PackedInt32Array(-786452, 262144, 2, -720916, 0, 1, -655380,
 position = Vector2(-279, -81)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Torch" type="Node" parent="."]

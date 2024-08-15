@@ -1562,6 +1562,21 @@ _data = {
 "platform2": SubResource("Animation_qf6cc")
 }
 
+[sub_resource type="Animation" id="Animation_ek8jx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-63, -221)]
+}
+
 [sub_resource type="Animation" id="Animation_q5r68"]
 resource_name = "platform2"
 length = 2.5
@@ -1577,21 +1592,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-63, -221), Vector2(-223, -221)]
-}
-
-[sub_resource type="Animation" id="Animation_ek8jx"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-63, -221)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k1o5u"]
@@ -1619,7 +1619,6 @@ layer_1/tile_data = PackedInt32Array(-786452, 262144, 1, -720916, 196608, 1, -65
 position = Vector2(-270, -162)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Torch" type="Node" parent="."]

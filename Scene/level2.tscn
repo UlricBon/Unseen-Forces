@@ -1524,7 +1524,6 @@ layer_1/tile_data = PackedInt32Array(-786452, 262144, 2, -720916, 0, 1, -655380,
 position = Vector2(-278, -229)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Torch" type="Node" parent="."]
@@ -1595,8 +1594,8 @@ player = NodePath("../Player")
 [node name="TextureProgressBar" type="TextureProgressBar" parent="FuelBar"]
 offset_right = 40.0
 offset_bottom = 40.0
-max_value = 200.0
-value = 200.0
+max_value = 250.0
+value = 250.0
 texture_progress = ExtResource("14_ge62r")
 metadata/_edit_use_anchors_ = true
 

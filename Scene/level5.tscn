@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="7_8i2kt"]
 [ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="8_xvan2"]
 [ext_resource type="PackedScene" uid="uid://dig3meigja8lo" path="res://Scene/enemy.tscn" id="9_evbm2"]
-[ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="10_rdw6u"]
+[ext_resource type="PackedScene" uid="uid://b2q464lb515a0" path="res://Scene/enemy_slow.tscn" id="10_rdw6u"]
 [ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="11_2ovdx"]
 [ext_resource type="Script" path="res://Scripts/FuelBar.gd" id="12_hypii"]
 [ext_resource type="Texture2D" uid="uid://dtr433juu3hqd" path="res://assets/sprites/pbar.png" id="13_pb56s"]
@@ -1558,6 +1558,21 @@ _data = {
 "platform": SubResource("Animation_ajmht")
 }
 
+[sub_resource type="Animation" id="Animation_icaph"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-95, -157)]
+}
+
 [sub_resource type="Animation" id="Animation_meslt"]
 resource_name = "platform2"
 length = 3.0
@@ -1575,7 +1590,13 @@ tracks/0/keys = {
 "values": [Vector2(-95, -157), Vector2(-222.97, -157)]
 }
 
-[sub_resource type="Animation" id="Animation_icaph"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lyaxv"]
+_data = {
+"RESET": SubResource("Animation_icaph"),
+"platform2": SubResource("Animation_meslt")
+}
+
+[sub_resource type="Animation" id="Animation_pl43a"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1587,13 +1608,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-95, -157)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_lyaxv"]
-_data = {
-"RESET": SubResource("Animation_icaph"),
-"platform2": SubResource("Animation_meslt")
+"values": [Vector2(-288, -253)]
 }
 
 [sub_resource type="Animation" id="Animation_43nbw"]
@@ -1613,7 +1628,13 @@ tracks/0/keys = {
 "values": [Vector2(-287, -165), Vector2(-288, -253)]
 }
 
-[sub_resource type="Animation" id="Animation_pl43a"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0vs6q"]
+_data = {
+"RESET": SubResource("Animation_pl43a"),
+"platform3": SubResource("Animation_43nbw")
+}
+
+[sub_resource type="Animation" id="Animation_kegj3"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1625,13 +1646,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-288, -253)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_0vs6q"]
-_data = {
-"RESET": SubResource("Animation_pl43a"),
-"platform3": SubResource("Animation_43nbw")
+"values": [Vector2(-223, -221)]
 }
 
 [sub_resource type="Animation" id="Animation_8cbj6"]
@@ -1649,21 +1664,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-223, -221), Vector2(-127, -221)]
-}
-
-[sub_resource type="Animation" id="Animation_kegj3"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-223, -221)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n2d0j"]
@@ -1691,7 +1691,6 @@ layer_1/tile_data = PackedInt32Array(-786452, 196608, 1, -720916, 196608, 1, -65
 position = Vector2(-277, -83)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Torch" type="Node" parent="."]

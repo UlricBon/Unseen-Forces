@@ -307,6 +307,7 @@ _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.5, 360), 0.0, 0.0, 0, 0, Vecto
 point_count = 3
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 5
 position = Vector2(-1, 4)
 scale = Vector2(1, 0.991453)
 collision_layer = 2
@@ -390,6 +391,10 @@ stream = ExtResource("5_236yo")
 volume_db = -5.0
 
 [node name="CoyoteTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="JumpBufferTimer" type="Timer" parent="."]
+wait_time = 0.1
 one_shot = true
 
 [connection signal="timeout" from="SlowTimer" to="." method="_on_slow_timer_timeout"]
