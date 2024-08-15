@@ -389,4 +389,8 @@ one_shot = true
 stream = ExtResource("5_236yo")
 volume_db = -5.0
 
+[node name="CoyoteTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="SlowTimer" to="." method="_on_slow_timer_timeout"]
+[connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
