@@ -6,13 +6,17 @@ const JUMP_VELOCITY = -250.0
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var light = $Light
 @onready var cpu_particles_2d = $CPUParticles2D
-@onready var cpu_particles_2d_2 = $CPUParticles2D2
+@onready var cpu_particles_2d_2 = $CanvasLayer/CPUParticles2D2
 @onready var cpu_particles_2d_3 = $CPUParticles2D3
+@onready var slow_timer = $SlowTimer
+@onready var canvas_layer = $CanvasLayer
+
 
 const MAXFUEL = 5000
 var FUEL = 5000
 var lightBool = false
 var playerDeath = false
+var playerSlow = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -22,7 +26,9 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-	
+		
+	if playerSlow:
+		SPEED = 50
 	
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
@@ -38,6 +44,7 @@ func _physics_process(delta):
 	if playerDeath:
 		animated_sprite_2d.visible = false
 		light.visible = false
+		cpu_particles_2d_2.global_position = global_position
 		cpu_particles_2d_2.initial_velocity_max = velocity.x*1.5
 		cpu_particles_2d_2.emitting = true
 		
@@ -116,3 +123,7 @@ func play_footsteps():
 		$FootstepSFX.play()
 		$FootstepAudioTimer.start()
 
+func _on_slow_timer_timeout():
+	print("stopppp")
+	playerSlow = false
+	SPEED = 100

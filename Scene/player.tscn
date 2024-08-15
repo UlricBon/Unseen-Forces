@@ -294,6 +294,7 @@ animations = [{
 [sub_resource type="Environment" id="Environment_u8rlu"]
 background_mode = 3
 glow_enabled = true
+glow_strength = 1.3
 glow_blend_mode = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyoh2"]
@@ -306,11 +307,12 @@ _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.5, 360), 0.0, 0.0, 0, 0, Vecto
 point_count = 3
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(-1, 4)
 collision_layer = 2
 script = ExtResource("1_gw1od")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-self_modulate = Color(3, 3, 3, 1)
+self_modulate = Color(2, 3, 3, 1)
 sprite_frames = SubResource("SpriteFrames_ifotu")
 animation = &"Idle"
 autoplay = "Lit Up Running"
@@ -360,7 +362,10 @@ initial_velocity_min = 100.0
 initial_velocity_max = 100.0
 color = Color(0, 0.905882, 1, 1)
 
-[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="CanvasLayer"]
+position = Vector2(-1, 4)
 emitting = false
 amount = 1
 one_shot = true
@@ -380,3 +385,8 @@ pitch_scale = 1.08
 [node name="FootstepAudioTimer" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
+[node name="SlowTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="SlowTimer" to="." method="_on_slow_timer_timeout"]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1qaox7x8ydq4"]
+
+[ext_resource type="Script" path="res://Scripts/Slow Zone.gd" id="1_m3le8"]
+
+[node name="SlowZone" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_m3le8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
