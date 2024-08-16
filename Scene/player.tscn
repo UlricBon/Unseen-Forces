@@ -1,10 +1,11 @@
-[gd_scene load_steps=46 format=3 uid="uid://cnrcsph655rdh"]
+[gd_scene load_steps=47 format=3 uid="uid://cnrcsph655rdh"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_gw1od"]
 [ext_resource type="Texture2D" uid="uid://1lpg5e5fuq11" path="res://assets/sprites/tallow_ss.png" id="2_g1o0y"]
 [ext_resource type="PackedScene" uid="uid://cgbq2lkg4x8s7" path="res://Scene/light/Light.tscn" id="3_y8ec2"]
 [ext_resource type="Texture2D" uid="uid://cc82xvbdmgnco" path="res://assets/sprites/tallow_dead.png" id="4_m8m8g"]
 [ext_resource type="AudioStream" uid="uid://bib7qugxfd077" path="res://assets/sfx/wood_footstep.wav" id="5_236yo"]
+[ext_resource type="Texture2D" uid="uid://b40462075ryx2" path="res://Scene/FuelBar/fuelbar.png" id="6_4puhw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a64uq"]
 atlas = ExtResource("2_g1o0y")
@@ -396,6 +397,15 @@ one_shot = true
 [node name="JumpBufferTimer" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
+
+[node name="FuelBar" type="TextureProgressBar" parent="."]
+offset_left = -4.0
+offset_top = -8.06897
+offset_right = 4.0
+offset_bottom = -7.06897
+max_value = 200.0
+value = 200.0
+texture_progress = ExtResource("6_4puhw")
 
 [connection signal="timeout" from="SlowTimer" to="." method="_on_slow_timer_timeout"]
 [connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]

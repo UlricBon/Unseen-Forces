@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bns8t6sabc3xn"]
+[gd_scene load_steps=16 format=3 uid="uid://bns8t6sabc3xn"]
 
 [ext_resource type="Script" path="res://Scripts/GameManagerLevel2.gd" id="1_fu6j1"]
 [ext_resource type="Texture2D" uid="uid://c4octcr4pxqhl" path="res://assets/tiles/wooden_tileset_2.png" id="2_uuasa"]
@@ -7,10 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://cnrcsph655rdh" path="res://Scene/player.tscn" id="5_hur0p"]
 [ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="7_86vdf"]
 [ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="8_hsakw"]
+[ext_resource type="FontFile" uid="uid://8anobw07hrp1" path="res://fonts/PixelOperator8.ttf" id="11_b66xl"]
 [ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="11_r6lvj"]
-[ext_resource type="Script" path="res://Scripts/FuelBar.gd" id="12_bpakl"]
 [ext_resource type="PackedScene" uid="uid://uclpnqd1fit4" path="res://Scene/door.tscn" id="13_7bnxi"]
-[ext_resource type="Texture2D" uid="uid://dtr433juu3hqd" path="res://assets/sprites/pbar.png" id="14_ge62r"]
 [ext_resource type="Script" path="res://Scripts/Door2.gd" id="14_wdupo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qvn2o"]
@@ -1505,7 +1504,7 @@ sources/1 = SubResource("TileSetAtlasSource_6r1ll")
 sources/2 = SubResource("TileSetAtlasSource_jid3h")
 sources/0 = SubResource("TileSetAtlasSource_qvn2o")
 
-[node name="Game3" type="Node2D"]
+[node name="Game5" type="Node2D"]
 position = Vector2(303, 257)
 
 [node name="GameManagerLevel2" type="Node" parent="."]
@@ -1529,7 +1528,7 @@ color = Color(0, 0, 0, 1)
 [node name="Torch" type="Node" parent="."]
 
 [node name="TorchScene" parent="Torch" instance=ExtResource("7_86vdf")]
-position = Vector2(268, 149)
+position = Vector2(304, 148)
 
 [node name="TorchScene2" parent="Torch" instance=ExtResource("7_86vdf")]
 position = Vector2(317, 37)
@@ -1587,18 +1586,6 @@ position = Vector2(213, 163)
 [node name="Spike12" parent="Spikes" instance=ExtResource("11_r6lvj")]
 position = Vector2(197, 163)
 
-[node name="FuelBar" type="CanvasLayer" parent="." node_paths=PackedStringArray("player")]
-script = ExtResource("12_bpakl")
-player = NodePath("../Player")
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="FuelBar"]
-offset_right = 40.0
-offset_bottom = 40.0
-max_value = 350.0
-value = 350.0
-texture_progress = ExtResource("14_ge62r")
-metadata/_edit_use_anchors_ = true
-
 [node name="Door" parent="." instance=ExtResource("13_7bnxi")]
 position = Vector2(-279, -107)
 collision_mask = 2
@@ -1606,4 +1593,27 @@ script = ExtResource("14_wdupo")
 
 [node name="Match" parent="." instance=ExtResource("8_hsakw")]
 self_modulate = Color(2, 2, 2, 1)
-position = Vector2(-1, -109)
+position = Vector2(-41, -110)
+
+[node name="Label" type="Label" parent="."]
+z_index = 100
+offset_left = -297.0
+offset_top = -243.0
+offset_right = -244.0
+offset_bottom = -220.0
+theme_override_fonts/font = ExtResource("11_b66xl")
+theme_override_font_sizes/font_size = 8
+text = "Beware of
+Spikes"
+
+[node name="Label2" type="Label" parent="."]
+z_index = 100
+offset_left = -20.0
+offset_top = -129.0
+offset_right = 78.0
+offset_bottom = -99.0
+theme_override_fonts/font = ExtResource("11_b66xl")
+theme_override_font_sizes/font_size = 8
+text = "Collect 
+matches
+to refuel"
