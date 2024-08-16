@@ -1699,7 +1699,7 @@ color = Color(0, 0, 0, 1)
 position = Vector2(49, 21)
 
 [node name="TorchScene5" parent="Torch" instance=ExtResource("7_8i2kt")]
-position = Vector2(207, 21)
+position = Vector2(289, 36)
 
 [node name="TorchScene2" parent="Torch" instance=ExtResource("7_8i2kt")]
 position = Vector2(261, 181)
@@ -1747,8 +1747,8 @@ player = NodePath("../Player")
 [node name="TextureProgressBar" type="TextureProgressBar" parent="FuelBar"]
 offset_right = 40.0
 offset_bottom = 40.0
-max_value = 200.0
-value = 200.0
+max_value = 350.0
+value = 350.0
 texture_progress = ExtResource("13_pb56s")
 metadata/_edit_use_anchors_ = true
 

@@ -90,8 +90,14 @@ func _physics_process(delta):
 			else:
 				play_footsteps()
 				animated_sprite_2d.play("Running")
-		light.light_scale = 1
-		light.offset.y = 1
+		
+		if light.light_scale <= 1.2 and light.offset.y <= 1:
+			light.light_scale = 1.2
+			light.offset.y = 1
+		else:
+			light.light_scale /= 1.02
+			light.offset.y /= 1.024
+			
 	
 	if direction > 0:
 		animated_sprite_2d.flip_h = false

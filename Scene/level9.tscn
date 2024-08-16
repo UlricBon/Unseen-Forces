@@ -2200,8 +2200,8 @@ player = NodePath("../Player")
 visible = false
 offset_right = 40.0
 offset_bottom = 40.0
-max_value = 200.0
-value = 200.0
+max_value = 350.0
+value = 350.0
 texture_progress = ExtResource("11_ro2uk")
 metadata/_edit_use_anchors_ = true
 
