@@ -152,7 +152,6 @@ func _input( event ):
 		print("space pressed")
 		lightBool = true
 		cpu_particles_2d_3.emitting = true
-	elif event.is_action_released("Interact") || !burning:
 		burning = true
 		SPEED = 150
 	elif event.is_action_released("Interact"):

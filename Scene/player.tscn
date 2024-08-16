@@ -309,7 +309,7 @@ point_count = 3
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
-position = Vector2(-59, 5)
+position = Vector2(-1, 4)
 scale = Vector2(1, 0.991453)
 collision_layer = 2
 script = ExtResource("1_gw1od")
@@ -317,19 +317,19 @@ script = ExtResource("1_gw1od")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 self_modulate = Color(2, 3, 3, 1)
 sprite_frames = SubResource("SpriteFrames_ifotu")
-animation = &"Unlit Idle"
+animation = &"Idle"
 autoplay = "Lit Up Running"
-frame_progress = 0.2027
+frame_progress = 0.929205
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 9)
 shape = SubResource("RectangleShape2D_jyoh2")
 
 [node name="Light" parent="." instance=ExtResource("3_y8ec2")]
-position = Vector2(1, 19.1638)
+position = Vector2(0, 18)
 offset = Vector2(0, 1)
 texture_scale = 0.3
-light_scale = 1.5
+light_scale = 1.2
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_u8rlu")
@@ -368,7 +368,7 @@ color = Color(0, 0.905882, 1, 1)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CPUParticles2D2" type="CPUParticles2D" parent="CanvasLayer"]
-position = Vector2(-59, 5)
+position = Vector2(-1, 4)
 emitting = false
 amount = 1
 one_shot = true
