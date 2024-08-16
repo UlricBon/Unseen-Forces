@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://rw8v4876e178"]
+[gd_scene load_steps=3 format=3 uid="uid://rw8v4876e178"]
 
 [ext_resource type="Texture2D" uid="uid://bo2yjiyykp2jw" path="res://assets/sprites/spikes.png" id="1_3epdu"]
 [ext_resource type="PackedScene" uid="uid://cc4nn2j4odg13" path="res://Scene/kill_zone.tscn" id="1_m8cw8"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x4hdm"]
-size = Vector2(12, 12)
 
 [node name="Spike" type="Node2D"]
 position = Vector2(15, 9)
@@ -16,6 +13,5 @@ texture = ExtResource("1_3epdu")
 [node name="KillZone" parent="." instance=ExtResource("1_m8cw8")]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
-position = Vector2(3, 7)
-shape = SubResource("RectangleShape2D_x4hdm")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KillZone"]
+polygon = PackedVector2Array(1.69044, 1, -4.22247, 13, 10.306, 13, 4.29183, 1)
