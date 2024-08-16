@@ -1,22 +1,22 @@
 [gd_scene load_steps=18 format=3 uid="uid://wim6eyp7jh2m"]
 
-[ext_resource type="Script" path="res://Scripts/GameManagerLevel4.gd" id="1_ueqaq"]
-[ext_resource type="Texture2D" uid="uid://c4octcr4pxqhl" path="res://assets/tiles/wooden_tileset_2.png" id="2_twatd"]
-[ext_resource type="Texture2D" uid="uid://bvaax6j0lf3q6" path="res://assets/tiles/wood_bg.png" id="3_igrou"]
-[ext_resource type="Texture2D" uid="uid://ttna23xdkl5g" path="res://assets/tiles/wood_tileset.png" id="4_epxgu"]
-[ext_resource type="PackedScene" uid="uid://cnrcsph655rdh" path="res://Scene/player.tscn" id="5_5rbk3"]
-[ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="7_qo62p"]
-[ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="8_2fap7"]
-[ext_resource type="PackedScene" uid="uid://dig3meigja8lo" path="res://Scene/enemy.tscn" id="9_dp3w3"]
-[ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="10_5yn3s"]
-[ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="11_6u6sg"]
-[ext_resource type="FontFile" uid="uid://8anobw07hrp1" path="res://fonts/PixelOperator8.ttf" id="13_bfkoy"]
-[ext_resource type="PackedScene" uid="uid://uclpnqd1fit4" path="res://Scene/door.tscn" id="13_yblgj"]
-[ext_resource type="Script" path="res://Scripts/Door4.gd" id="14_pkih7"]
+[ext_resource type="Script" path="res://Scripts/GameManagerLevel4.gd" id="1_inpam"]
+[ext_resource type="Texture2D" uid="uid://c4octcr4pxqhl" path="res://assets/tiles/wooden_tileset_2.png" id="2_nxh4e"]
+[ext_resource type="Texture2D" uid="uid://bvaax6j0lf3q6" path="res://assets/tiles/wood_bg.png" id="3_dhd4a"]
+[ext_resource type="Texture2D" uid="uid://ttna23xdkl5g" path="res://assets/tiles/wood_tileset.png" id="4_or6pf"]
+[ext_resource type="PackedScene" uid="uid://cnrcsph655rdh" path="res://Scene/player.tscn" id="5_mkslu"]
+[ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="6_sm4ak"]
+[ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="7_pevpc"]
+[ext_resource type="PackedScene" uid="uid://dig3meigja8lo" path="res://Scene/enemy.tscn" id="8_7hmqx"]
+[ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="9_erf36"]
+[ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="10_18cgs"]
+[ext_resource type="Script" path="res://Scripts/Door4.gd" id="12_2ssll"]
+[ext_resource type="FontFile" uid="uid://8anobw07hrp1" path="res://fonts/PixelOperator8.ttf" id="13_l3l1a"]
+[ext_resource type="PackedScene" uid="uid://uclpnqd1fit4" path="res://Scene/door.tscn" id="13_wi2bt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qvn2o"]
 resource_name = "platform_autotile"
-texture = ExtResource("2_twatd")
+texture = ExtResource("2_nxh4e")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 0
@@ -491,7 +491,7 @@ texture = ExtResource("2_twatd")
 8:4/0/terrains_peering_bit/top_side = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6r1ll"]
-texture = ExtResource("3_igrou")
+texture = ExtResource("3_dhd4a")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1430,7 +1430,7 @@ texture = ExtResource("3_igrou")
 23:12/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jid3h"]
-texture = ExtResource("4_epxgu")
+texture = ExtResource("4_or6pf")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1511,7 +1511,7 @@ position = Vector2(303, 257)
 metadata/_edit_horizontal_guides_ = [-24.0]
 
 [node name="GameManagerLevel4" type="Node" parent="."]
-script = ExtResource("1_ueqaq")
+script = ExtResource("1_inpam")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, -1)
@@ -1522,7 +1522,7 @@ layer_0/tile_data = PackedInt32Array(-1048596, 1, 0, -983060, 1, 1, -917524, 1, 
 layer_1/name = "Collision"
 layer_1/tile_data = PackedInt32Array(-786452, 196608, 1, -720916, 196608, 1, -655380, 0, 1, -589844, 262144, 1, -524308, 262144, 2, -458772, 262144, 1, -1048590, 458752, 3, -1048583, 262144, 3, -1048582, 65536, 3, -1048581, 65536, 3, -1048580, 458752, 3, -1048578, 262144, 3, -1048577, 65536, 3, -1114112, 65536, 3, -1114111, 65536, 3, -1114110, 65536, 3, -1048596, 262144, 0, -983060, 196608, 1, -917524, 196608, 1, -851988, 196608, 1, -1048595, 65536, 3, -1048594, 65536, 3, -1048593, 65536, 3, -1048592, 65536, 3, -1048591, 65536, 3, -196628, 262144, 2, -131092, 0, 2, -131091, 65536, 2, -131090, 65536, 2, -131089, 65536, 2, -131088, 65536, 2, -131087, 65536, 2, -131086, 65536, 2, -131085, 65536, 2, -262139, 196608, 1, -196603, 458752, 3, -196604, 65536, 3, -196605, 65536, 3, -196606, 327680, 3, -196607, 65536, 2, -196608, 65536, 2, -131073, 65536, 2, -131074, 65536, 2, -131075, 65536, 2, -131076, 65536, 2, -131077, 65536, 2, -131078, 65536, 2, -131079, 65536, 2, -131080, 65536, 2, -131081, 65536, 2, -131082, 65536, 2, -131083, 65536, 2, -131084, 65536, 2, -1114107, 458752, 0, -1048571, 196608, 1, -983035, 196608, 1, -917499, 196608, 1, -851963, 458752, 2, -786427, 131072, 1, -720891, 458752, 1, -655355, 196608, 1, -589819, 196608, 1, -524283, 196608, 1, -458747, 196608, 1, -393211, 196608, 1, -327675, 196608, 1, -1114108, 65536, 3, -1114109, 65536, 3, -393236, 196608, 1, -327700, 196608, 1, -262164, 196608, 1, -851964, 65536, 0, -851965, 65536, 0, -851966, 65536, 0, -851967, 0, 0, -786435, 131072, 0, -786436, 0, 0, -786440, 131072, 0, -786441, 0, 0, -720905, 0, 1, -720904, 131072, 1, -720900, 0, 1, -720899, 131072, 1, -786431, 0, 2, -786430, 393216, 1, -786429, 65536, 1, -786428, 65536, 1, -655372, 65536, 3, -655371, 65536, 3, -655369, 393216, 3, -655370, 65536, 3, -655368, 327680, 3, -655367, 65536, 3, -655366, 65536, 3, -655365, 65536, 3, -655364, 393216, 4, -655363, 131072, 1, -720894, 0, 2, -720893, 65536, 2, -720892, 65536, 2, -327682, 0, 1, -262146, 393216, 2, -196610, 65536, 1, -393215, 65536, 1, -327679, 65536, 1, -262143, 65536, 1, -262144, 65536, 1, -196609, 65536, 1, -262145, 65536, 1, -327681, 65536, 1, -327680, 65536, 1, -262147, 65536, 0, -262148, 65536, 0, -262149, 65536, 0, -262150, 65536, 0, -262151, 65536, 0, -196611, 65536, 1, -196612, 65536, 1, -196613, 65536, 1, -196614, 65536, 1, -196615, 65536, 1, -196616, 65536, 1, -458771, 327680, 3, -393216, 65536, 1, -393218, 0, 1, -393217, 65536, 1, -458752, 65536, 1, -458751, 65536, 1, -524287, 65536, 0, -524288, 65536, 0, -458753, 65536, 0, -458754, 0, 0, -786445, 131072, 0, -720909, 131072, 1, -655373, 327680, 3, -655374, 393216, 3, -655375, 0, 3, -720910, 0, 1, -786446, 0, 0, -524307, 131072, 0, -458770, 65536, 3, -458764, 65536, 3, -458765, 65536, 3, -458766, 65536, 3, -458767, 65536, 3, -458768, 65536, 3, -458769, 65536, 3, -458763, 131072, 3, -196617, 393216, 2, -196618, 65536, 0, -196619, 65536, 0, -196620, 65536, 0, -196621, 65536, 0, -196622, 65536, 0, -196623, 65536, 0, -196624, 65536, 0, -196625, 65536, 0, -196626, 65536, 0, -196627, 65536, 0, -262152, 327680, 2, -327688, 131072, 0, -262153, 0, 1, -524286, 131072, 0, -458750, 131072, 1, -393214, 131072, 1, -327678, 131072, 1, -262142, 131072, 1, -327689, 0, 0, -589827, 131072, 2, -589828, 0, 2, -1114125, 65536, 3, -1114116, 262144, 0, -1114115, 65536, 3, -1114114, 458752, 0, -1114119, 458752, 0, -1114124, 458752, 0, -1114126, 262144, 0, -1048588, 262144, 3, -1048587, 65536, 3, -1048586, 65536, 3, -1048585, 458752, 3, -1114121, 262144, 0, -1114120, 65536, 3)
 
-[node name="Player" parent="." instance=ExtResource("5_5rbk3")]
+[node name="Player" parent="." instance=ExtResource("5_mkslu")]
 position = Vector2(-268, -81)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
@@ -1530,81 +1530,81 @@ color = Color(0, 0, 0, 1)
 
 [node name="Torch" type="Node" parent="."]
 
-[node name="TorchScene" parent="Torch" instance=ExtResource("7_qo62p")]
+[node name="TorchScene" parent="Torch" instance=ExtResource("6_sm4ak")]
 position = Vector2(295, 117)
 
-[node name="TorchScene2" parent="Torch" instance=ExtResource("7_qo62p")]
+[node name="TorchScene2" parent="Torch" instance=ExtResource("6_sm4ak")]
 position = Vector2(38, 117)
 
-[node name="TorchScene3" parent="Torch" instance=ExtResource("7_qo62p")]
+[node name="TorchScene3" parent="Torch" instance=ExtResource("6_sm4ak")]
 position = Vector2(148, 181)
 
-[node name="Match" parent="." instance=ExtResource("8_2fap7")]
+[node name="Match" parent="." instance=ExtResource("7_pevpc")]
 position = Vector2(28, -221)
 
-[node name="Match2" parent="." instance=ExtResource("8_2fap7")]
+[node name="Match2" parent="." instance=ExtResource("7_pevpc")]
 position = Vector2(-76, -93)
 
-[node name="Enemy" parent="." instance=ExtResource("9_dp3w3")]
+[node name="Enemy" parent="." instance=ExtResource("8_7hmqx")]
 position = Vector2(19, -148)
 
-[node name="EnemySlow" parent="." instance=ExtResource("10_5yn3s")]
+[node name="EnemySlow" parent="." instance=ExtResource("9_erf36")]
 position = Vector2(-199, -221)
 
-[node name="EnemySlow2" parent="." instance=ExtResource("10_5yn3s")]
+[node name="EnemySlow2" parent="." instance=ExtResource("9_erf36")]
 position = Vector2(-39, -221)
 
-[node name="EnemySlow3" parent="." instance=ExtResource("10_5yn3s")]
+[node name="EnemySlow3" parent="." instance=ExtResource("9_erf36")]
 position = Vector2(-119, -221)
 
-[node name="Spike2" parent="." instance=ExtResource("11_6u6sg")]
+[node name="Spike2" parent="." instance=ExtResource("10_18cgs")]
 position = Vector2(70, -62)
 
-[node name="Spike4" parent="." instance=ExtResource("11_6u6sg")]
+[node name="Spike4" parent="." instance=ExtResource("10_18cgs")]
 position = Vector2(-186, -190)
 
-[node name="Spike5" parent="." instance=ExtResource("11_6u6sg")]
+[node name="Spike5" parent="." instance=ExtResource("10_18cgs")]
 position = Vector2(-154, -190)
 
-[node name="Spike7" parent="." instance=ExtResource("11_6u6sg")]
+[node name="Spike7" parent="." instance=ExtResource("10_18cgs")]
 position = Vector2(-106, -190)
 
-[node name="Spike8" parent="." instance=ExtResource("11_6u6sg")]
+[node name="Spike8" parent="." instance=ExtResource("10_18cgs")]
 position = Vector2(-74, -190)
 
-[node name="Spike10" parent="." instance=ExtResource("11_6u6sg")]
+[node name="Spike10" parent="." instance=ExtResource("10_18cgs")]
 position = Vector2(-165, -100)
 rotation = 3.14159
 
-[node name="Spike14" parent="." instance=ExtResource("11_6u6sg")]
+[node name="Spike14" parent="." instance=ExtResource("10_18cgs")]
 position = Vector2(-44, -102)
 rotation = 4.71238
 
-[node name="Spike15" parent="." instance=ExtResource("11_6u6sg")]
+[node name="Spike15" parent="." instance=ExtResource("10_18cgs")]
 position = Vector2(-44, -86)
 rotation = 4.71238
 
-[node name="Spike11" parent="." instance=ExtResource("11_6u6sg")]
+[node name="Spike11" parent="." instance=ExtResource("10_18cgs")]
 position = Vector2(-201, -148)
 rotation = 3.14159
 
-[node name="Spike12" parent="." instance=ExtResource("11_6u6sg")]
+[node name="Spike12" parent="." instance=ExtResource("10_18cgs")]
 position = Vector2(-217, -148)
 rotation = 3.14159
 
-[node name="Spike9" parent="." instance=ExtResource("11_6u6sg")]
+[node name="Spike9" parent="." instance=ExtResource("10_18cgs")]
 position = Vector2(-90, -190)
 
-[node name="Spike6" parent="." instance=ExtResource("11_6u6sg")]
+[node name="Spike6" parent="." instance=ExtResource("10_18cgs")]
 position = Vector2(-170, -190)
 
-[node name="Spike3" parent="." instance=ExtResource("11_6u6sg")]
+[node name="Spike3" parent="." instance=ExtResource("10_18cgs")]
 position = Vector2(54, -62)
 
-[node name="Door" parent="." instance=ExtResource("13_yblgj")]
+[node name="Door" parent="." instance=ExtResource("13_wi2bt")]
 position = Vector2(64, -219)
 collision_mask = 2
-script = ExtResource("14_pkih7")
+script = ExtResource("12_2ssll")
 
 [node name="Label" type="Label" parent="."]
 z_index = 100
@@ -1612,7 +1612,7 @@ offset_left = -289.0
 offset_top = -182.0
 offset_right = -228.0
 offset_bottom = -141.0
-theme_override_fonts/font = ExtResource("13_bfkoy")
+theme_override_fonts/font = ExtResource("13_l3l1a")
 theme_override_font_sizes/font_size = 8
 text = "Some
 enemies

@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://cnrcsph655rdh"]
+[gd_scene load_steps=47 format=3 uid="uid://cnrcsph655rdh"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_gw1od"]
 [ext_resource type="Texture2D" uid="uid://1lpg5e5fuq11" path="res://assets/sprites/tallow_ss.png" id="2_g1o0y"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://cc82xvbdmgnco" path="res://assets/sprites/tallow_dead.png" id="4_m8m8g"]
 [ext_resource type="AudioStream" uid="uid://bib7qugxfd077" path="res://assets/sfx/wood_footstep.wav" id="5_236yo"]
 [ext_resource type="Texture2D" uid="uid://b40462075ryx2" path="res://Scene/FuelBar/fuelbar.png" id="6_4puhw"]
-[ext_resource type="AudioStream" uid="uid://bcbiluhsdup66" path="res://assets/sfx/jump.wav" id="7_aqori"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a64uq"]
 atlas = ExtResource("2_g1o0y")
@@ -390,8 +389,6 @@ one_shot = true
 
 [node name="FootstepSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_236yo")
-volume_db = -5.0
-bus = &"SFX"
 
 [node name="CoyoteTimer" type="Timer" parent="."]
 one_shot = true
@@ -407,10 +404,6 @@ offset_right = 4.0
 offset_bottom = -7.06897
 value = 100.0
 texture_progress = ExtResource("6_4puhw")
-
-[node name="JumpSFX" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_aqori")
-bus = &"SFX"
 
 [connection signal="timeout" from="SlowTimer" to="." method="_on_slow_timer_timeout"]
 [connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
