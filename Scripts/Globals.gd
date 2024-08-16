@@ -1,6 +1,7 @@
 extends Node
 
 var qwerty = 100
+var timer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
