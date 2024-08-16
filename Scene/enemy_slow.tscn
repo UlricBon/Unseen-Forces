@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dkefcueqxlmnm"]
 
 [ext_resource type="Script" path="res://Scripts/enemy_slow.gd" id="1_5d38d"]
-[ext_resource type="PackedScene" uid="uid://d1qaox7x8ydq4" path="res://Scene/slow_zone.tscn" id="2_1258g"]
+[ext_resource type="PackedScene" path="res://Scene/slow_zone.tscn" id="2_1258g"]
 [ext_resource type="Texture2D" uid="uid://bbaliasncbju2" path="res://assets/sprites/ice_ghost-ss.png" id="2_tt3w4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dpf5j"]

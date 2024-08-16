@@ -1503,6 +1503,7 @@ sources/0 = SubResource("TileSetAtlasSource_qvn2o")
 
 [node name="Game5" type="Node2D"]
 position = Vector2(303, 257)
+rotation = 0.000706968
 
 [node name="GameManagerLevel1" type="Node" parent="."]
 script = ExtResource("1_bwpf3")
@@ -1529,6 +1530,7 @@ color = Color(0, 0, 0, 1)
 position = Vector2(231, 149)
 
 [node name="TorchScene2" parent="Torch" instance=ExtResource("7_2hw4m")]
+z_index = 1
 position = Vector2(371, 101)
 
 [node name="TorchScene3" parent="Torch" instance=ExtResource("7_2hw4m")]
@@ -1542,7 +1544,6 @@ position = Vector2(58, -219)
 collision_mask = 2
 
 [node name="Label" type="Label" parent="."]
-z_index = 100
 offset_left = -301.0
 offset_top = -94.0
 offset_right = -248.0
@@ -1553,22 +1554,29 @@ text = "W,A,D
 to move"
 
 [node name="Label2" type="Label" parent="."]
-z_index = 100
-offset_left = -95.0
-offset_top = -126.0
-offset_right = -42.0
-offset_bottom = -103.0
+offset_left = 15.0
+offset_top = -181.0
+offset_right = 76.0
+offset_bottom = -158.0
 theme_override_fonts/font = ExtResource("8_pxbpa")
 theme_override_font_sizes/font_size = 8
 text = "Light all
-torches"
+cauldrons"
 
 [node name="Label3" type="Label" parent="."]
-z_index = 100
 offset_left = -235.0
 offset_top = -113.0
 offset_right = -112.0
 offset_bottom = -105.0
 theme_override_fonts/font = ExtResource("8_pxbpa")
 theme_override_font_sizes/font_size = 8
-text = "Press Space to burn"
+text = "Hold 'Space' to burn"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = -180.0
+offset_top = -229.0
+offset_right = -56.0
+offset_bottom = -221.0
+theme_override_fonts/font = ExtResource("8_pxbpa")
+theme_override_font_sizes/font_size = 8
+text = "...to open the door"

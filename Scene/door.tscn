@@ -27,7 +27,8 @@ disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(1, -32)
+position = Vector2(1, -30)
+scale = Vector2(0.5, 0.4375)
 texture = ExtResource("4_c7bu3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

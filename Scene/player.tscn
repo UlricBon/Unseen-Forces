@@ -389,7 +389,6 @@ one_shot = true
 
 [node name="FootstepSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_236yo")
-volume_db = -5.0
 
 [node name="CoyoteTimer" type="Timer" parent="."]
 one_shot = true
@@ -403,8 +402,7 @@ offset_left = -4.0
 offset_top = -8.06897
 offset_right = 4.0
 offset_bottom = -7.06897
-max_value = 200.0
-value = 200.0
+value = 100.0
 texture_progress = ExtResource("6_4puhw")
 
 [connection signal="timeout" from="SlowTimer" to="." method="_on_slow_timer_timeout"]
