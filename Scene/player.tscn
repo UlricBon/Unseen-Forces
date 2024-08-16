@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cc82xvbdmgnco" path="res://assets/sprites/tallow_dead.png" id="4_m8m8g"]
 [ext_resource type="AudioStream" uid="uid://bib7qugxfd077" path="res://assets/sfx/wood_footstep.wav" id="5_236yo"]
 [ext_resource type="Texture2D" uid="uid://b40462075ryx2" path="res://Scene/FuelBar/fuelbar.png" id="6_4puhw"]
-[ext_resource type="AudioStream" uid="uid://bcbiluhsdup66" path="res://assets/sfx/jump.wav" id="7_aqori"]
+[ext_resource type="AudioStream" uid="uid://dpihw3c1x7p2k" path="res://assets/sfx/jump.wav" id="7_aqori"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a64uq"]
 atlas = ExtResource("2_g1o0y")

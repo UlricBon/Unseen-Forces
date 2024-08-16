@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scene/options.gd" id="1_4bno8"]
 [ext_resource type="Script" path="res://Scene/HSlider.gd" id="1_hk4bi"]
-[ext_resource type="AudioStream" uid="uid://bcbiluhsdup66" path="res://assets/sfx/jump.wav" id="3_j2rrr"]
+[ext_resource type="AudioStream" uid="uid://dpihw3c1x7p2k" path="res://assets/sfx/jump.wav" id="3_j2rrr"]
 
 [node name="Options" type="Node2D"]
 script = ExtResource("1_4bno8")
