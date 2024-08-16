@@ -1584,13 +1584,10 @@ script = ExtResource("14_tn7nn")
 
 [node name="Label" type="Label" parent="."]
 z_index = 100
-offset_left = -144.0
-offset_top = -163.0
-offset_right = -95.0
-offset_bottom = -122.0
+offset_left = -224.0
+offset_top = -151.0
+offset_right = -98.0
+offset_bottom = -110.0
 theme_override_fonts/font = ExtResource("12_5rhy0")
 theme_override_font_sizes/font_size = 8
-text = "Some 
-enemies
-can kill 
-you"
+text = "Some ghosts can kill"
