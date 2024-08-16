@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://oi8fx0278rah"]
+[gd_scene load_steps=17 format=3 uid="uid://oi8fx0278rah"]
 
 [ext_resource type="Script" path="res://Scripts/GameManagerLevel3.gd" id="1_8y42k"]
 [ext_resource type="Texture2D" uid="uid://c4octcr4pxqhl" path="res://assets/tiles/wooden_tileset_2.png" id="2_1rcmq"]
@@ -9,8 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="8_oumyf"]
 [ext_resource type="PackedScene" uid="uid://dig3meigja8lo" path="res://Scene/enemy.tscn" id="9_rvmql"]
 [ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="11_05c6s"]
-[ext_resource type="Script" path="res://Scripts/FuelBar.gd" id="12_dycrs"]
-[ext_resource type="Texture2D" uid="uid://dtr433juu3hqd" path="res://assets/sprites/pbar.png" id="13_7bnf2"]
+[ext_resource type="FontFile" uid="uid://8anobw07hrp1" path="res://fonts/PixelOperator8.ttf" id="12_5rhy0"]
 [ext_resource type="PackedScene" uid="uid://uclpnqd1fit4" path="res://Scene/door.tscn" id="13_oc8ri"]
 [ext_resource type="Script" path="res://Scripts/Door3.gd" id="14_tn7nn"]
 
@@ -1578,19 +1577,20 @@ position = Vector2(-218, -78)
 [node name="Spike4" parent="." instance=ExtResource("11_05c6s")]
 position = Vector2(-234, -78)
 
-[node name="FuelBar" type="CanvasLayer" parent="." node_paths=PackedStringArray("player")]
-script = ExtResource("12_dycrs")
-player = NodePath("../Player")
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="FuelBar"]
-offset_right = 40.0
-offset_bottom = 40.0
-max_value = 350.0
-value = 350.0
-texture_progress = ExtResource("13_7bnf2")
-metadata/_edit_use_anchors_ = true
-
 [node name="Door" parent="." instance=ExtResource("13_oc8ri")]
 position = Vector2(-272, -219)
 collision_mask = 2
 script = ExtResource("14_tn7nn")
+
+[node name="Label" type="Label" parent="."]
+z_index = 100
+offset_left = 25.0
+offset_top = -225.0
+offset_right = 74.0
+offset_bottom = -184.0
+theme_override_fonts/font = ExtResource("12_5rhy0")
+theme_override_font_sizes/font_size = 8
+text = "Some 
+enemies
+can kill 
+you"

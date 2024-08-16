@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bxbhtg6uy8qgu"]
+[gd_scene load_steps=17 format=3 uid="uid://bxbhtg6uy8qgu"]
 
 [ext_resource type="Script" path="res://Scripts/GameManagerLevel6.gd" id="1_mcjsk"]
 [ext_resource type="Texture2D" uid="uid://c4octcr4pxqhl" path="res://assets/tiles/wooden_tileset_2.png" id="2_g7xpx"]
@@ -8,8 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="6_vcurb"]
 [ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="9_r8gl3"]
 [ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="10_rjjug"]
-[ext_resource type="Script" path="res://Scripts/FuelBar.gd" id="11_wkhn1"]
-[ext_resource type="Texture2D" uid="uid://dtr433juu3hqd" path="res://assets/sprites/pbar.png" id="12_fgqdv"]
 [ext_resource type="PackedScene" uid="uid://uclpnqd1fit4" path="res://Scene/door.tscn" id="13_bksj8"]
 [ext_resource type="PackedScene" uid="uid://cyq8pgxd3s6xs" path="res://Scene/enemyFast.tscn" id="13_if4oh"]
 [ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="14_28633"]
@@ -1661,18 +1659,6 @@ rotation = 3.14159
 [node name="Spike19" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(44, -244)
 rotation = 3.14159
-
-[node name="FuelBar" type="CanvasLayer" parent="." node_paths=PackedStringArray("player")]
-script = ExtResource("11_wkhn1")
-player = NodePath("../Player")
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="FuelBar"]
-offset_right = 40.0
-offset_bottom = 40.0
-max_value = 350.0
-value = 350.0
-texture_progress = ExtResource("12_fgqdv")
-metadata/_edit_use_anchors_ = true
 
 [node name="Door" parent="." instance=ExtResource("13_bksj8")]
 position = Vector2(-282, -75)

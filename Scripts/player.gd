@@ -28,6 +28,8 @@ var burning = false
 var coyote_time = 0.1
 var can_jump = false
 
+@onready var pbar = $FuelBar
+
 func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("Retry"):
@@ -39,6 +41,17 @@ func _physics_process(delta):
 		
 	if burning:
 		print("plyaer is bunring")
+	if playerSlow:
+		SPEED = 50
+	
+	if burning and pbar.value >0:
+		print(pbar.value)
+		pbar.value -= 1
+	else:
+		burning = false
+		lightBool = false
+
+
 	
 	# Handle jump.
 	if is_on_floor() and can_jump == false:
@@ -135,13 +148,17 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func _input( event ):
-	
-	if event.is_action_pressed("Interact") and event.is_pressed() and burning:
+	if event.is_action_pressed("Interact") and event.is_pressed():
+		print("space pressed")
 		lightBool = true
 		cpu_particles_2d_3.emitting = true
 	elif event.is_action_released("Interact") || !burning:
+		burning = true
+		SPEED = 150
+	elif event.is_action_released("Interact"):
 		lightBool = false
 		cpu_particles_2d_3.emitting = false
+		burning = false
 		SPEED = 100
 #var interact_object
 

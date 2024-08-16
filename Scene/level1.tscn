@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cgoq2nsnysa0v"]
+[gd_scene load_steps=13 format=3 uid="uid://cgoq2nsnysa0v"]
 
 [ext_resource type="Script" path="res://Scripts/GameManagerLevel1.gd" id="1_bwpf3"]
 [ext_resource type="Texture2D" uid="uid://c4octcr4pxqhl" path="res://assets/tiles/wooden_tileset_2.png" id="2_8oltk"]
@@ -6,8 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ttna23xdkl5g" path="res://assets/tiles/wood_tileset.png" id="4_x61gd"]
 [ext_resource type="PackedScene" uid="uid://cnrcsph655rdh" path="res://Scene/player.tscn" id="5_wpw6t"]
 [ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="7_2hw4m"]
-[ext_resource type="Script" path="res://Scripts/FuelBar.gd" id="12_23v3w"]
-[ext_resource type="Texture2D" uid="uid://dtr433juu3hqd" path="res://assets/sprites/pbar.png" id="13_dntf3"]
+[ext_resource type="FontFile" uid="uid://8anobw07hrp1" path="res://fonts/PixelOperator8.ttf" id="8_pxbpa"]
 [ext_resource type="PackedScene" uid="uid://uclpnqd1fit4" path="res://Scene/door.tscn" id="14_ec4qr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qvn2o"]
@@ -1502,7 +1501,7 @@ sources/1 = SubResource("TileSetAtlasSource_6r1ll")
 sources/2 = SubResource("TileSetAtlasSource_jid3h")
 sources/0 = SubResource("TileSetAtlasSource_qvn2o")
 
-[node name="Game3" type="Node2D"]
+[node name="Game5" type="Node2D"]
 position = Vector2(303, 257)
 
 [node name="GameManagerLevel1" type="Node" parent="."]
@@ -1538,18 +1537,38 @@ position = Vector2(37, 37)
 [node name="TorchScene4" parent="Torch" instance=ExtResource("7_2hw4m")]
 position = Vector2(263, 37)
 
-[node name="FuelBar" type="CanvasLayer" parent="." node_paths=PackedStringArray("player")]
-script = ExtResource("12_23v3w")
-player = NodePath("../Player")
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="FuelBar"]
-offset_right = 40.0
-offset_bottom = 40.0
-max_value = 350.0
-value = 350.0
-texture_progress = ExtResource("13_dntf3")
-metadata/_edit_use_anchors_ = true
-
 [node name="Door" parent="." instance=ExtResource("14_ec4qr")]
 position = Vector2(58, -219)
 collision_mask = 2
+
+[node name="Label" type="Label" parent="."]
+z_index = 100
+offset_left = -301.0
+offset_top = -94.0
+offset_right = -248.0
+offset_bottom = -71.0
+theme_override_fonts/font = ExtResource("8_pxbpa")
+theme_override_font_sizes/font_size = 8
+text = "W,A,D 
+to move"
+
+[node name="Label2" type="Label" parent="."]
+z_index = 100
+offset_left = -95.0
+offset_top = -126.0
+offset_right = -42.0
+offset_bottom = -103.0
+theme_override_fonts/font = ExtResource("8_pxbpa")
+theme_override_font_sizes/font_size = 8
+text = "Light all
+torches"
+
+[node name="Label3" type="Label" parent="."]
+z_index = 100
+offset_left = -235.0
+offset_top = -113.0
+offset_right = -112.0
+offset_bottom = -105.0
+theme_override_fonts/font = ExtResource("8_pxbpa")
+theme_override_font_sizes/font_size = 8
+text = "Press Space to burn"
