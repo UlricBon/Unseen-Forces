@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://c23tb0eb22y5i"]
+
+[ext_resource type="Script" path="res://Scene/controls.gd" id="1_2cm0t"]
+
+[node name="Controls" type="Node2D"]
+script = ExtResource("1_2cm0t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 63.0
+offset_top = 28.0
+offset_right = 340.0
+offset_bottom = 177.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "W : Jump
+A,D : Move
+Shift + R : Restart
+Space : Light up / Move Faster
+E : Enter Door
+"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "BACK"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://pcgr3cv6ooak"]
+
+[ext_resource type="Script" path="res://Scene/options.gd" id="1_4bno8"]
+[ext_resource type="Script" path="res://Scene/HSlider.gd" id="1_hk4bi"]
+[ext_resource type="AudioStream" uid="uid://bcbiluhsdup66" path="res://assets/sfx/jump.wav" id="3_j2rrr"]
+
+[node name="Options" type="Node2D"]
+script = ExtResource("1_4bno8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 384.0
+offset_bottom = 214.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Master"
+
+[node name="Master" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+value = 5.0
+script = ExtResource("1_hk4bi")
+bus_name = "Master"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Music"
+
+[node name="Music" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+value = 5.0
+script = ExtResource("1_hk4bi")
+bus_name = "Master"
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "SFX"
+
+[node name="SFX" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+value = 5.0
+script = ExtResource("1_hk4bi")
+bus_name = "Master"
+
+[node name="Back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Back"
+
+[node name="MasterAudio" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, -27)
+stream = ExtResource("3_j2rrr")
+autoplay = true
+
+[node name="MusicAudio" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, -27)
+stream = ExtResource("3_j2rrr")
+autoplay = true
+bus = &"Music"
+
+[node name="SFXAudio" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, -27)
+stream = ExtResource("3_j2rrr")
+autoplay = true
+bus = &"SFX"
+
+[connection signal="drag_ended" from="VBoxContainer/Master" to="." method="_on_master_drag_ended"]
+[connection signal="drag_ended" from="VBoxContainer/Music" to="." method="_on_music_drag_ended"]
+[connection signal="drag_ended" from="VBoxContainer/SFX" to="." method="_on_sfx_drag_ended"]
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]
