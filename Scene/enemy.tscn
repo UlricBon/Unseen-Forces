@@ -48,16 +48,19 @@ autoplay = "default"
 frame_progress = 0.166629
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, 6)
 target_position = Vector2(7, 0)
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(0, 6)
 target_position = Vector2(-7, 0)
 
 [node name="KillZone" parent="." instance=ExtResource("2_4o0um")]
+position = Vector2(0, 4)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
-position = Vector2(0, 8)
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_m6c4k")
 
 [node name="RayCastGroundRight" type="RayCast2D" parent="."]
