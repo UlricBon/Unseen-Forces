@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bvsvxyohlwgtk"]
 
-[ext_resource type="Texture2D" uid="uid://c0dxt6qkmpghb" path="res://assets/sprites/platforms.png" id="1_xwpc6"]
+[ext_resource type="Texture2D" uid="uid://nbfss34tc7ul" path="res://assets/sprites/wood_platform.png" id="1_xaktb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nliio"]
 size = Vector2(32, 8)
@@ -8,7 +8,7 @@ size = Vector2(32, 8)
 [node name="Platform" type="AnimatableBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_xwpc6")
+texture = ExtResource("1_xaktb")
 region_enabled = true
 region_rect = Rect2(16, 0, 32, 8)
 
