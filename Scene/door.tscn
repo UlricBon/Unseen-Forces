@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Door1.gd" id="1_g0lwu"]
 [ext_resource type="Texture2D" uid="uid://cwmhk7c1fixo1" path="res://assets/sprites/door_opened.png" id="2_5v2g1"]
 [ext_resource type="Texture2D" uid="uid://sa5a8vcxo55b" path="res://assets/sprites/door_closed.png" id="3_e5p2m"]
-[ext_resource type="Texture2D" uid="uid://6t5j120mi6qx" path="res://assets/sprites/w_key.png" id="4_c7bu3"]
+[ext_resource type="Texture2D" uid="uid://dsdj7cyakfykd" path="res://assets/sprites/e_key_icon.png" id="4_k8k6g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8bl0"]
 size = Vector2(21, 25)
@@ -29,7 +29,7 @@ disabled = true
 visible = false
 position = Vector2(1, -30)
 scale = Vector2(0.5, 0.4375)
-texture = ExtResource("4_c7bu3")
+texture = ExtResource("4_k8k6g")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
