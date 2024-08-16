@@ -1,21 +1,21 @@
 [gd_scene load_steps=17 format=3 uid="uid://bxbhtg6uy8qgu"]
 
-[ext_resource type="Script" path="res://Scripts/GameManagerLevel6.gd" id="1_8y7b3"]
-[ext_resource type="Texture2D" uid="uid://c4octcr4pxqhl" path="res://assets/tiles/wooden_tileset_2.png" id="2_wvrcx"]
-[ext_resource type="Texture2D" uid="uid://bvaax6j0lf3q6" path="res://assets/tiles/wood_bg.png" id="3_oge7g"]
-[ext_resource type="Texture2D" uid="uid://ttna23xdkl5g" path="res://assets/tiles/wood_tileset.png" id="4_aq6oi"]
-[ext_resource type="PackedScene" uid="uid://cnrcsph655rdh" path="res://Scene/player.tscn" id="5_7r4ah"]
-[ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="6_3tv17"]
-[ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="7_73f16"]
-[ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="8_h8fff"]
-[ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="9_ocy63"]
-[ext_resource type="Script" path="res://Scripts/Door6.gd" id="10_gav7x"]
-[ext_resource type="PackedScene" uid="uid://cyq8pgxd3s6xs" path="res://Scene/enemyFast.tscn" id="11_qfakj"]
-[ext_resource type="PackedScene" uid="uid://uclpnqd1fit4" path="res://Scene/door.tscn" id="12_25hoh"]
+[ext_resource type="Script" path="res://Scripts/GameManagerLevel6.gd" id="1_mcjsk"]
+[ext_resource type="Texture2D" uid="uid://c4octcr4pxqhl" path="res://assets/tiles/wooden_tileset_2.png" id="2_g7xpx"]
+[ext_resource type="Texture2D" uid="uid://bvaax6j0lf3q6" path="res://assets/tiles/wood_bg.png" id="3_l6pw2"]
+[ext_resource type="Texture2D" uid="uid://ttna23xdkl5g" path="res://assets/tiles/wood_tileset.png" id="4_b4d2s"]
+[ext_resource type="PackedScene" uid="uid://cnrcsph655rdh" path="res://Scene/player.tscn" id="5_e74s6"]
+[ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="6_vcurb"]
+[ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="9_r8gl3"]
+[ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="10_rjjug"]
+[ext_resource type="PackedScene" uid="uid://uclpnqd1fit4" path="res://Scene/door.tscn" id="13_bksj8"]
+[ext_resource type="PackedScene" uid="uid://cyq8pgxd3s6xs" path="res://Scene/enemyFast.tscn" id="13_if4oh"]
+[ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="14_28633"]
+[ext_resource type="Script" path="res://Scripts/Door6.gd" id="14_xfgpu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qvn2o"]
 resource_name = "platform_autotile"
-texture = ExtResource("2_wvrcx")
+texture = ExtResource("2_g7xpx")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 0
@@ -490,7 +490,7 @@ texture = ExtResource("2_wvrcx")
 8:4/0/terrains_peering_bit/top_side = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6r1ll"]
-texture = ExtResource("3_oge7g")
+texture = ExtResource("3_l6pw2")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1429,7 +1429,7 @@ texture = ExtResource("3_oge7g")
 23:12/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jid3h"]
-texture = ExtResource("4_aq6oi")
+texture = ExtResource("4_b4d2s")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1509,7 +1509,7 @@ sources/0 = SubResource("TileSetAtlasSource_qvn2o")
 position = Vector2(303, 257)
 
 [node name="GameManagerLevel6" type="Node" parent="."]
-script = ExtResource("1_8y7b3")
+script = ExtResource("1_mcjsk")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, -1)
@@ -1520,8 +1520,8 @@ layer_0/tile_data = PackedInt32Array(-1048596, 1, 0, -983060, 1, 1, -917524, 1, 
 layer_1/name = "Collision"
 layer_1/tile_data = PackedInt32Array(-786452, 262144, 2, -720916, 262144, 1, -655380, 196608, 1, -589844, 196608, 1, -524308, 196608, 1, -458772, 262144, 4, -1048590, 65536, 3, -1048589, 65536, 3, -1048588, 65536, 3, -1048587, 65536, 3, -1048586, 65536, 3, -1048585, 65536, 3, -1048584, 65536, 3, -1048583, 65536, 3, -1048582, 65536, 3, -1048581, 65536, 3, -1048580, 65536, 3, -1048579, 65536, 3, -1048578, 65536, 3, -1048577, 65536, 3, -1114112, 65536, 3, -1114111, 65536, 3, -1114110, 65536, 3, -1048596, 262144, 0, -983060, 196608, 1, -917524, 196608, 1, -851988, 196608, 1, -1048595, 65536, 3, -1048594, 65536, 3, -1048593, 65536, 3, -1048592, 65536, 3, -1048591, 65536, 3, -196628, 262144, 2, -131092, 0, 2, -131091, 65536, 2, -131090, 65536, 2, -131089, 65536, 2, -131088, 65536, 2, -131087, 65536, 2, -131086, 65536, 2, -131085, 65536, 2, -262139, 458752, 2, -196603, 131072, 2, -196604, 65536, 2, -196605, 65536, 2, -196606, 65536, 2, -196607, 65536, 2, -196608, 65536, 2, -131073, 65536, 2, -131074, 65536, 2, -131075, 65536, 2, -131076, 65536, 2, -131077, 65536, 2, -131078, 65536, 2, -131079, 65536, 2, -131080, 65536, 2, -131081, 65536, 2, -131082, 65536, 2, -131083, 65536, 2, -131084, 65536, 2, -1114107, 458752, 0, -1048571, 196608, 1, -983035, 196608, 1, -917499, 196608, 1, -851963, 196608, 1, -786427, 196608, 1, -720891, 196608, 1, -655355, 196608, 1, -589819, 458752, 4, -524283, 196608, 1, -458747, 196608, 1, -393211, 458752, 4, -327675, 196608, 1, -1114108, 65536, 3, -1114109, 65536, 3, -393236, 196608, 1, -327700, 196608, 1, -262164, 196608, 1, -589823, 458752, 3, -655359, 196608, 1, -720895, 262144, 4, -786431, 196608, 1, -851967, 458752, 0, -786448, 262144, 0, -720912, 196608, 1, -655376, 524288, 3, -589842, 0, 3, -589841, 458752, 3, -458753, 458752, 3, -786433, 65536, 3, -851968, 65536, 3, -786434, 65536, 3, -589821, 0, 3, -589820, 65536, 3, -720893, 131072, 3, -720894, 65536, 3, -458771, 65536, 3, -458770, 65536, 3, -786447, 65536, 3, -786446, 65536, 3, -786445, 65536, 3, -786444, 65536, 3, -786443, 65536, 3, -786442, 65536, 3, -786441, 65536, 3, -786440, 65536, 3, -786439, 65536, 3, -786438, 65536, 3, -786437, 65536, 3, -786436, 65536, 3, -786435, 65536, 3, -655361, 131072, 3, -655362, 65536, 3, -655363, 65536, 3, -655364, 65536, 3, -655365, 65536, 3, -655366, 65536, 3, -655367, 65536, 3, -655368, 65536, 3, -655369, 65536, 3, -655370, 65536, 3, -655371, 65536, 3, -655372, 65536, 3, -655373, 65536, 3, -655374, 65536, 3, -655375, 65536, 3, -458769, 65536, 3, -458768, 65536, 3, -458767, 65536, 3, -458766, 65536, 3, -458762, 65536, 3, -458761, 65536, 3, -458760, 65536, 3, -458759, 65536, 3, -458758, 65536, 3, -458757, 65536, 3, -458756, 65536, 3, -458755, 65536, 3, -458754, 65536, 3, -458765, 65536, 3, -458764, 65536, 3, -458763, 65536, 3, -655377, 262144, 0, -786451, 327680, 0, -786450, 131072, 3, -720915, 131072, 2, -393212, 65536, 3, -393213, 65536, 3, -393214, 65536, 3, -393215, 65536, 3, -393216, 0, 3, -262140, 65536, 0, -262141, 65536, 0, -262142, 65536, 0, -262143, 65536, 0, -262144, 65536, 0, -196609, 65536, 0, -196611, 65536, 0, -196610, 65536, 0, -196612, 65536, 0, -196613, 65536, 0, -196614, 65536, 0, -196615, 65536, 0, -196621, 65536, 0, -196622, 65536, 0, -196616, 65536, 0, -196617, 65536, 0, -196618, 65536, 0, -196619, 65536, 0, -196620, 65536, 0, -196623, 65536, 0, -196624, 65536, 0, -196625, 65536, 0, -196626, 65536, 0, -196627, 65536, 0, -589824, 65536, 3, -524289, 262144, 0)
 
-[node name="Player" parent="." instance=ExtResource("5_7r4ah")]
-position = Vector2(-189, -195)
+[node name="Player" parent="." instance=ExtResource("5_e74s6")]
+position = Vector2(-194, -147)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
@@ -1529,144 +1529,152 @@ color = Color(0, 0, 0, 1)
 
 [node name="Torch" type="Node" parent="."]
 
-[node name="TorchScene" parent="Torch" instance=ExtResource("6_3tv17")]
+[node name="TorchScene" parent="Torch" instance=ExtResource("6_vcurb")]
 position = Vector2(76, 37)
 
-[node name="TorchScene5" parent="Torch" instance=ExtResource("6_3tv17")]
+[node name="TorchScene5" parent="Torch" instance=ExtResource("6_vcurb")]
 position = Vector2(59, 117)
 
-[node name="TorchScene2" parent="Torch" instance=ExtResource("6_3tv17")]
+[node name="TorchScene2" parent="Torch" instance=ExtResource("6_vcurb")]
 position = Vector2(354, 69)
 
-[node name="TorchScene3" parent="Torch" instance=ExtResource("6_3tv17")]
+[node name="TorchScene3" parent="Torch" instance=ExtResource("6_vcurb")]
 position = Vector2(349, 152)
 
-[node name="TorchScene4" parent="Torch" instance=ExtResource("6_3tv17")]
+[node name="TorchScene4" parent="Torch" instance=ExtResource("6_vcurb")]
 position = Vector2(186, 118)
 
-[node name="EnemySlow" parent="." instance=ExtResource("8_h8fff")]
+[node name="EnemySlow" parent="." instance=ExtResource("9_r8gl3")]
 position = Vector2(-117, -107)
 
-[node name="EnemySlow2" parent="." instance=ExtResource("8_h8fff")]
+[node name="EnemySlow2" parent="." instance=ExtResource("9_r8gl3")]
 position = Vector2(-182, -79)
 
-[node name="EnemySlow3" parent="." instance=ExtResource("8_h8fff")]
+[node name="EnemySlow3" parent="." instance=ExtResource("9_r8gl3")]
 position = Vector2(-245, -108)
 
-[node name="EnemySlow4" parent="." instance=ExtResource("8_h8fff")]
+[node name="EnemySlow4" parent="." instance=ExtResource("9_r8gl3")]
 position = Vector2(-52, -79)
 
-[node name="Spike22" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike22" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-292, -244)
 rotation = 3.14159
 
-[node name="Spike23" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike23" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-260, -244)
 rotation = 3.14159
 
-[node name="Spike24" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike24" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-276, -244)
 rotation = 3.14159
 
-[node name="Spike38" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike38" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-194, -100)
 rotation = 3.14159
 
-[node name="Spike39" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike39" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-210, -100)
 rotation = 3.14159
 
-[node name="Spike40" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike40" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-226, -100)
 rotation = 3.14159
 
-[node name="Spike49" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike49" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-257, -100)
 rotation = 3.14159
 
-[node name="Spike50" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike50" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-273, -100)
 rotation = 3.14159
 
-[node name="Spike52" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike52" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-289, -100)
 rotation = 3.14159
 
-[node name="Spike42" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike42" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-130, -100)
 rotation = 3.14159
 
-[node name="Spike43" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike43" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-146, -100)
 rotation = 3.14159
 
-[node name="Spike44" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike44" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-162, -100)
 rotation = 3.14159
 
-[node name="Spike45" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike45" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-65, -100)
 rotation = 3.14159
 
-[node name="Spike55" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike55" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(68, -118)
 rotation = 4.71238
 
-[node name="Spike56" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike56" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(68, -102)
 rotation = 4.71238
 
-[node name="Spike51" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike51" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-202, -222)
 rotation = 6.28318
 
-[node name="Spike53" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike53" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-186, -222)
 rotation = 6.28318
 
-[node name="Spike54" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike54" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-122, -222)
 rotation = 6.28318
 
-[node name="Spike57" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike57" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-106, -222)
 rotation = 6.28318
 
-[node name="Spike58" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike58" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-42, -222)
 rotation = 6.28318
 
-[node name="Spike59" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike59" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-26, -222)
 rotation = 6.28318
 
-[node name="Spike46" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike46" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-81, -100)
 rotation = 3.14159
 
-[node name="Spike47" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike47" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-97, -100)
 rotation = 3.14159
 
-[node name="Spike18" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike18" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(60, -244)
 rotation = 3.14159
 
-[node name="Spike21" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike21" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(76, -244)
 rotation = 3.14159
 
-[node name="Spike19" parent="." instance=ExtResource("9_ocy63")]
+[node name="Spike19" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(44, -244)
 rotation = 3.14159
 
-[node name="Door" parent="." instance=ExtResource("12_25hoh")]
+[node name="Door" parent="." instance=ExtResource("13_bksj8")]
 position = Vector2(-282, -75)
 collision_mask = 2
-script = ExtResource("10_gav7x")
+script = ExtResource("14_xfgpu")
 
-[node name="Enemy" parent="." instance=ExtResource("11_qfakj")]
+[node name="Enemy" parent="." instance=ExtResource("13_if4oh")]
 position = Vector2(-31, -80)
 
-[node name="Match" parent="." instance=ExtResource("7_73f16")]
+[node name="Match" parent="." instance=ExtResource("14_28633")]
 position = Vector2(-251, -224)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 153.0
+offset_top = 45.0
+offset_right = 441.0
+offset_bottom = 167.0

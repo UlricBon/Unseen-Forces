@@ -14,8 +14,9 @@ func _process(delta):
 		sprite_2d.visible = true
 		collision_shape_2d.disabled = false
 	if Input.is_action_just_pressed("Enter") and canEnter:
-		print("you have entered")
-		call_deferred("_change_scene")
+		get_parent().get_node("CanvasLayer").get_node("Label").text = "Congrats, elapsed time is: " + str(Globals.get_elapsed_time())
+		#print("you have entered")
+		#call_deferred("_change_scene")
 
 func _on_body_entered(body):
 	print("you are in")
