@@ -1,22 +1,22 @@
 [gd_scene load_steps=30 format=3 uid="uid://bb7xbja16e1m3"]
 
-[ext_resource type="Script" path="res://Scripts/GameManagerLevel5.gd" id="1_7gunr"]
-[ext_resource type="Texture2D" uid="uid://c4octcr4pxqhl" path="res://assets/tiles/wooden_tileset_2.png" id="2_yokw7"]
-[ext_resource type="Texture2D" uid="uid://bvaax6j0lf3q6" path="res://assets/tiles/wood_bg.png" id="3_htn5e"]
-[ext_resource type="Texture2D" uid="uid://ttna23xdkl5g" path="res://assets/tiles/wood_tileset.png" id="4_n2yqd"]
-[ext_resource type="PackedScene" uid="uid://cnrcsph655rdh" path="res://Scene/player.tscn" id="5_7w8li"]
-[ext_resource type="PackedScene" uid="uid://bvsvxyohlwgtk" path="res://Scene/platform.tscn" id="6_x7502"]
-[ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="7_8i2kt"]
-[ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="8_xvan2"]
-[ext_resource type="PackedScene" uid="uid://dig3meigja8lo" path="res://Scene/enemy.tscn" id="9_evbm2"]
-[ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="10_rdw6u"]
-[ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="11_2ovdx"]
-[ext_resource type="PackedScene" uid="uid://uclpnqd1fit4" path="res://Scene/door.tscn" id="13_urous"]
-[ext_resource type="Script" path="res://Scripts/Door5.gd" id="14_madu2"]
+[ext_resource type="Script" path="res://Scripts/GameManagerLevel5.gd" id="1_njcf2"]
+[ext_resource type="Texture2D" uid="uid://c4octcr4pxqhl" path="res://assets/tiles/wooden_tileset_2.png" id="2_g7xpx"]
+[ext_resource type="Texture2D" uid="uid://bvaax6j0lf3q6" path="res://assets/tiles/wood_bg.png" id="3_l6pw2"]
+[ext_resource type="Texture2D" uid="uid://ttna23xdkl5g" path="res://assets/tiles/wood_tileset.png" id="4_b4d2s"]
+[ext_resource type="PackedScene" uid="uid://cnrcsph655rdh" path="res://Scene/player.tscn" id="5_e74s6"]
+[ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="6_vcurb"]
+[ext_resource type="PackedScene" uid="uid://dig3meigja8lo" path="res://Scene/enemy.tscn" id="8_6gw24"]
+[ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="9_r8gl3"]
+[ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="10_rjjug"]
+[ext_resource type="Script" path="res://Scripts/Door5.gd" id="12_b7ajt"]
+[ext_resource type="PackedScene" uid="uid://uclpnqd1fit4" path="res://Scene/door.tscn" id="13_bksj8"]
+[ext_resource type="PackedScene" uid="uid://bvsvxyohlwgtk" path="res://Scene/platform.tscn" id="13_s5xus"]
+[ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="14_28633"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qvn2o"]
 resource_name = "platform_autotile"
-texture = ExtResource("2_yokw7")
+texture = ExtResource("2_g7xpx")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 0
@@ -491,7 +491,7 @@ texture = ExtResource("2_yokw7")
 8:4/0/terrains_peering_bit/top_side = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6r1ll"]
-texture = ExtResource("3_htn5e")
+texture = ExtResource("3_l6pw2")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1430,7 +1430,7 @@ texture = ExtResource("3_htn5e")
 23:12/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jid3h"]
-texture = ExtResource("4_n2yqd")
+texture = ExtResource("4_b4d2s")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1674,7 +1674,7 @@ _data = {
 position = Vector2(303, 257)
 
 [node name="GameManagerLevel5" type="Node" parent="."]
-script = ExtResource("1_7gunr")
+script = ExtResource("1_njcf2")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, -1)
@@ -1685,7 +1685,7 @@ layer_0/tile_data = PackedInt32Array(-1048596, 1, 0, -983060, 1, 1, -917524, 1, 
 layer_1/name = "Collision"
 layer_1/tile_data = PackedInt32Array(-786452, 196608, 1, -720916, 196608, 1, -655380, 196608, 1, -589844, 262144, 2, -524308, 262144, 1, -458772, 196608, 1, -1048590, 65536, 3, -1048589, 65536, 3, -1048588, 65536, 3, -1048587, 65536, 3, -1048586, 65536, 3, -1048585, 65536, 3, -1048584, 65536, 3, -1048583, 65536, 3, -1048582, 65536, 3, -1048581, 65536, 3, -1048580, 65536, 3, -1048579, 65536, 3, -1048578, 65536, 3, -1048577, 65536, 3, -1114112, 65536, 3, -1114111, 65536, 3, -1114110, 65536, 3, -1048596, 262144, 0, -983060, 196608, 1, -917524, 196608, 1, -851988, 196608, 1, -1048595, 65536, 3, -1048594, 65536, 3, -1048593, 65536, 3, -1048592, 65536, 3, -1048591, 65536, 3, -196628, 262144, 2, -131092, 0, 2, -131091, 65536, 2, -131090, 65536, 2, -131089, 65536, 2, -131088, 65536, 2, -131087, 65536, 2, -131086, 65536, 2, -131085, 65536, 2, -196621, 65536, 0, -196622, 65536, 0, -196623, 65536, 0, -196624, 65536, 0, -196625, 65536, 0, -196626, 65536, 0, -196627, 65536, 0, -196617, 65536, 0, -196616, 65536, 0, -196615, 65536, 0, -196614, 65536, 0, -196613, 65536, 0, -196612, 65536, 0, -196611, 65536, 0, -196610, 131072, 0, -262142, 0, 0, -262141, 65536, 0, -262140, 65536, 0, -262139, 458752, 2, -196603, 131072, 2, -196604, 65536, 2, -196605, 65536, 2, -196606, 393216, 3, -196607, 65536, 3, -196608, 65536, 3, -131073, 65536, 3, -131074, 327680, 3, -131075, 65536, 2, -131076, 65536, 2, -131077, 65536, 2, -131078, 65536, 2, -131079, 65536, 2, -131080, 65536, 2, -131081, 65536, 2, -131082, 65536, 2, -131083, 65536, 2, -131084, 65536, 2, -1114107, 458752, 0, -1048571, 196608, 1, -983035, 196608, 1, -917499, 196608, 1, -851963, 458752, 4, -786427, 196608, 1, -720891, 196608, 1, -655355, 196608, 1, -589819, 196608, 1, -524283, 196608, 1, -458747, 458752, 2, -393211, 458752, 1, -327675, 196608, 1, -1114108, 65536, 3, -1114109, 65536, 3, -393236, 196608, 1, -327700, 196608, 1, -262164, 196608, 1, -393214, 0, 3, -393213, 393216, 3, -458749, 0, 0, -458748, 65536, 0, -393212, 65536, 2, -589825, 131072, 0, -589826, 65536, 0, -589827, 65536, 0, -589828, 65536, 0, -589829, 0, 0, -851964, 65536, 3, -851965, 65536, 3, -851966, 65536, 3, -851967, 65536, 3, -851968, 65536, 3, -786433, 65536, 3, -786434, 65536, 3, -786435, 65536, 3, -786436, 65536, 3, -786437, 262144, 3, -851975, 0, 3, -589840, 131072, 0, -589841, 65536, 0, -589842, 65536, 0, -589843, 65536, 0, -524304, 131072, 2, -524305, 65536, 2, -524306, 65536, 2, -524307, 65536, 2, -524293, 0, 2, -524292, 65536, 2, -524291, 65536, 2, -524290, 65536, 2, -524289, 131072, 2, -851984, 131072, 0, -786448, 131072, 2, -196618, 65536, 0, -196619, 65536, 0, -196620, 65536, 0, -851985, 0, 0, -786449, 0, 2, -851974, 65536, 3, -589837, 196608, 3, -589832, 196608, 3, -851973, 458752, 0)
 
-[node name="Player" parent="." instance=ExtResource("5_7w8li")]
+[node name="Player" parent="." instance=ExtResource("5_e74s6")]
 position = Vector2(-277, -83)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
@@ -1693,57 +1693,57 @@ color = Color(0, 0, 0, 1)
 
 [node name="Torch" type="Node" parent="."]
 
-[node name="TorchScene" parent="Torch" instance=ExtResource("7_8i2kt")]
+[node name="TorchScene" parent="Torch" instance=ExtResource("6_vcurb")]
 position = Vector2(49, 21)
 
-[node name="TorchScene5" parent="Torch" instance=ExtResource("7_8i2kt")]
+[node name="TorchScene5" parent="Torch" instance=ExtResource("6_vcurb")]
 position = Vector2(289, 36)
 
-[node name="TorchScene2" parent="Torch" instance=ExtResource("7_8i2kt")]
+[node name="TorchScene2" parent="Torch" instance=ExtResource("6_vcurb")]
 position = Vector2(261, 181)
 
-[node name="TorchScene3" parent="Torch" instance=ExtResource("7_8i2kt")]
+[node name="TorchScene3" parent="Torch" instance=ExtResource("6_vcurb")]
 position = Vector2(48, 85)
 
-[node name="TorchScene4" parent="Torch" instance=ExtResource("7_8i2kt")]
+[node name="TorchScene4" parent="Torch" instance=ExtResource("6_vcurb")]
 position = Vector2(238, 85)
 
-[node name="Match" parent="." instance=ExtResource("8_xvan2")]
+[node name="Match" parent="." instance=ExtResource("14_28633")]
 position = Vector2(-175, -187)
 
-[node name="Enemy" parent="." instance=ExtResource("9_evbm2")]
+[node name="Enemy" parent="." instance=ExtResource("8_6gw24")]
 position = Vector2(31, -228)
 
-[node name="EnemySlow" parent="." instance=ExtResource("10_rdw6u")]
+[node name="EnemySlow" parent="." instance=ExtResource("9_r8gl3")]
 position = Vector2(-24, -78)
 
-[node name="EnemySlow2" parent="." instance=ExtResource("10_rdw6u")]
+[node name="EnemySlow2" parent="." instance=ExtResource("9_r8gl3")]
 position = Vector2(-135, -99)
 
-[node name="EnemySlow3" parent="." instance=ExtResource("10_rdw6u")]
+[node name="EnemySlow3" parent="." instance=ExtResource("9_r8gl3")]
 position = Vector2(-230, -79)
 
-[node name="Spike" parent="." instance=ExtResource("11_2ovdx")]
+[node name="Spike" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-10, -62)
 
-[node name="Spike4" parent="." instance=ExtResource("11_2ovdx")]
+[node name="Spike4" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-122, -174)
 
-[node name="Spike5" parent="." instance=ExtResource("11_2ovdx")]
+[node name="Spike5" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-202, -174)
 
-[node name="Spike2" parent="." instance=ExtResource("11_2ovdx")]
+[node name="Spike2" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(22, -62)
 
-[node name="Spike3" parent="." instance=ExtResource("11_2ovdx")]
+[node name="Spike3" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(6, -62)
 
-[node name="Door" parent="." instance=ExtResource("13_urous")]
+[node name="Door" parent="." instance=ExtResource("13_bksj8")]
 position = Vector2(63, -219)
 collision_mask = 2
-script = ExtResource("14_madu2")
+script = ExtResource("12_b7ajt")
 
-[node name="Platform" parent="." instance=ExtResource("6_x7502")]
+[node name="Platform" parent="." instance=ExtResource("13_s5xus")]
 position = Vector2(17, -122)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platform"]
@@ -1752,7 +1752,7 @@ libraries = {
 }
 autoplay = "platform"
 
-[node name="Platform2" parent="." instance=ExtResource("6_x7502")]
+[node name="Platform2" parent="." instance=ExtResource("13_s5xus")]
 position = Vector2(-95, -157)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platform2"]
@@ -1761,7 +1761,7 @@ libraries = {
 }
 autoplay = "platform2"
 
-[node name="Platform3" parent="." instance=ExtResource("6_x7502")]
+[node name="Platform3" parent="." instance=ExtResource("13_s5xus")]
 position = Vector2(-288, -253)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platform3"]
@@ -1770,7 +1770,7 @@ libraries = {
 }
 autoplay = "platform3"
 
-[node name="Platform4" parent="." instance=ExtResource("6_x7502")]
+[node name="Platform4" parent="." instance=ExtResource("13_s5xus")]
 position = Vector2(-223, -221)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platform4"]

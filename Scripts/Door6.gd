@@ -27,4 +27,4 @@ func _on_body_exited(body):
 	canEnter = false
 
 func _change_scene():
-	get_tree().change_scene_to_file("res://Scene/level7.tscn")
+	get_tree().change_scene_to_file("res://Scene/level10.tscn")
