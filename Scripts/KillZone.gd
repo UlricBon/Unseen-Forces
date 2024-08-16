@@ -4,13 +4,13 @@ extends Area2D
 
 func _on_body_entered(body):
 	if body is CharacterBody2D:
+		$DeathSFX.play()
 		print("You Died!")
 		Engine.time_scale = 0.5
 		body.playerDeath = true
 		print(body.playerDeath)
 		body.get_node("CollisionShape2D").queue_free()
 		timer.start()
-
 
 func _on_timer_timeout():
 	Engine.time_scale = 1.0
