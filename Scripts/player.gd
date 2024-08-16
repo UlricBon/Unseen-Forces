@@ -39,13 +39,10 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		
-	if burning:
-		print("plyaer is bunring")
 	if playerSlow:
 		SPEED = 50
 	
 	if burning and pbar.value >0:
-		print(pbar.value)
 		pbar.value -= 1
 	else:
 		burning = false
@@ -63,6 +60,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("Jump") or buffered_jump == true:
 			velocity.y = JUMP_VELOCITY
 			buffered_jump = false
+			$JumpSFX.play()
 	else:
 		if Input.is_action_just_pressed("Jump"):
 			buffered_jump = true
