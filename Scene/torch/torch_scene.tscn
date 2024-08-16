@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://cy2t1whtl6adu"]
 
 [ext_resource type="Script" path="res://Scene/torch/torch_scene.gd" id="1_v12qk"]
-[ext_resource type="Texture2D" uid="uid://dw3yehbeo3jvp" path="res://assets/sprites/cauldron_ss.png" id="2_0jedk"]
+[ext_resource type="Texture2D" uid="uid://2vcojl0ao41o" path="res://assets/sprites/cauldron_ss.png" id="2_0jedk"]
 [ext_resource type="PackedScene" uid="uid://cgbq2lkg4x8s7" path="res://Scene/light/Light.tscn" id="3_vr87q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b7bqn"]

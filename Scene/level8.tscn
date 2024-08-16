@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cnrcsph655rdh" path="res://Scene/player.tscn" id="5_mkslu"]
 [ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="6_sm4ak"]
 [ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="7_pevpc"]
-[ext_resource type="PackedScene" uid="uid://b2q464lb515a0" path="res://Scene/enemy_slow.tscn" id="9_erf36"]
+[ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="9_erf36"]
 [ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="10_18cgs"]
 [ext_resource type="Script" path="res://Scripts/FuelBar.gd" id="11_xs7kv"]
 [ext_resource type="Texture2D" uid="uid://dtr433juu3hqd" path="res://assets/sprites/pbar.png" id="12_kvi3q"]
@@ -1506,10 +1506,10 @@ sources/1 = SubResource("TileSetAtlasSource_6r1ll")
 sources/2 = SubResource("TileSetAtlasSource_jid3h")
 sources/0 = SubResource("TileSetAtlasSource_qvn2o")
 
-[node name="Game4" type="Node2D"]
+[node name="Game5" type="Node2D"]
 position = Vector2(303, 257)
 
-[node name="GameManagerLevel8" type="Node" parent="."]
+[node name="GameManagerLevel9" type="Node" parent="."]
 script = ExtResource("1_ujomf")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1539,16 +1539,16 @@ position = Vector2(68, -186)
 position = Vector2(-294, -248)
 
 [node name="EnemySlow" parent="." instance=ExtResource("9_erf36")]
-position = Vector2(-231, -189)
+position = Vector2(-230, -190)
 
 [node name="EnemySlow2" parent="." instance=ExtResource("9_erf36")]
-position = Vector2(-120, -109)
+position = Vector2(-118, -113)
 
 [node name="EnemySlow3" parent="." instance=ExtResource("9_erf36")]
-position = Vector2(-39, -109)
+position = Vector2(-36, -112)
 
 [node name="EnemySlow4" parent="." instance=ExtResource("9_erf36")]
-position = Vector2(-200, -109)
+position = Vector2(-200, -112)
 
 [node name="Spike51" parent="." instance=ExtResource("10_18cgs")]
 position = Vector2(-186, -78)

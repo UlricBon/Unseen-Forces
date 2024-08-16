@@ -29,7 +29,7 @@ var coyote_time = 0.1
 var can_jump = false
 
 func _physics_process(delta):
-		
+	
 	if Input.is_action_just_pressed("Retry"):
 		print("retry")
 		get_tree().reload_current_scene()
@@ -37,9 +37,6 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		
-	if playerSlow:
-		SPEED = 50
-	
 	if burning:
 		print("plyaer is bunring")
 	
@@ -70,33 +67,58 @@ func _physics_process(delta):
 		animated_sprite_2d.visible = false
 		light.visible = false
 		cpu_particles_2d_2.global_position = global_position
-		cpu_particles_2d_2.initial_velocity_max = velocity.x*1.5
+		cpu_particles_2d_2.initial_velocity_max = velocity.x * 1.5
 		cpu_particles_2d_2.emitting = true
-		
-	if lightBool:
-		lightBool = true
-		light.light_scale *= 1.02
-		light.offset.y *= 1.024
-		if is_on_floor():
-			if direction == 0:
-				animated_sprite_2d.play("Lit Up Idle")
-			else:
-				play_footsteps()
-				animated_sprite_2d.play("Lit Up Running")
 	else:
-		if is_on_floor():
-			if direction == 0:
-				animated_sprite_2d.play("Idle")
-			else:
-				play_footsteps()
-				animated_sprite_2d.play("Running")
-		
-		if light.light_scale <= 1.2 and light.offset.y <= 1:
-			light.light_scale = 1.2
-			light.offset.y = 1
+		var is_on_floor = is_on_floor()
+		if playerSlow:
+			SPEED = 50
+			var raw_color = Color()  
+			raw_color.r = 1
+			raw_color.g = 1 
+			raw_color.b = 1  
+			raw_color.a = 1
+			animated_sprite_2d.self_modulate =  raw_color
+			light.light_scale = 0.5
+			light.offset.y = -3
+			if is_on_floor:
+				if direction == 0:
+					animated_sprite_2d.play("Unlit Idle")
+				else:
+					play_footsteps()
+					animated_sprite_2d.play("Unlit Running")
 		else:
-			light.light_scale /= 1.02
-			light.offset.y /= 1.024
+			SPEED = 100
+			var raw_color = Color()  
+			raw_color.r = 2
+			raw_color.g = 3 
+			raw_color.b = 3  
+			raw_color.a = 1
+			animated_sprite_2d.self_modulate =  raw_color
+			if lightBool:
+				lightBool = true
+				light.light_scale *= 1.02
+				light.offset.y *= 1.024
+				SPEED = 150
+				if is_on_floor:
+					if direction == 0:
+						animated_sprite_2d.play("Lit Up Idle")
+					else:
+						play_footsteps()
+						animated_sprite_2d.play("Lit Up Running")
+			else:
+				if is_on_floor:
+					if direction == 0:
+						animated_sprite_2d.play("Idle")
+					else:
+						play_footsteps()
+						animated_sprite_2d.play("Running")
+				if light.light_scale <= 1.5 and light.offset.y <= 1:
+					light.light_scale = 1.5
+					light.offset.y = 1
+				else:
+					light.light_scale /= 1.02
+					light.offset.y /= 1.024
 			
 	
 	if direction > 0:
@@ -117,7 +139,6 @@ func _input( event ):
 	if event.is_action_pressed("Interact") and event.is_pressed() and burning:
 		lightBool = true
 		cpu_particles_2d_3.emitting = true
-		SPEED = 150
 	elif event.is_action_released("Interact") || !burning:
 		lightBool = false
 		cpu_particles_2d_3.emitting = false

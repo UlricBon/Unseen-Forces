@@ -14,14 +14,14 @@ func _process(delta):
 	
 	if ray_cast_right.is_colliding():
 		direction = -1
-		animated_sprite_2d.flip_h = true
+		animated_sprite_2d.flip_h = false
 	if ray_cast_left.is_colliding():
 		direction = 1
-		animated_sprite_2d.flip_h = false
+		animated_sprite_2d.flip_h = true
 	if direction == 1 and not ray_cast_ground_right.is_colliding():
 		direction = -1
-		animated_sprite_2d.flip_h = true
+		animated_sprite_2d.flip_h = false
 	if direction == -1 and not ray_cast_ground_left.is_colliding():
 		direction = 1
-		animated_sprite_2d.flip_h = false
+		animated_sprite_2d.flip_h = true
 	position.x += direction * speed * delta

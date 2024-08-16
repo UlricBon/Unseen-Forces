@@ -1,39 +1,32 @@
-[gd_scene load_steps=10 format=3 uid="uid://b2q464lb515a0"]
+[gd_scene load_steps=9 format=3 uid="uid://dkefcueqxlmnm"]
 
 [ext_resource type="Script" path="res://Scripts/enemy_slow.gd" id="1_5d38d"]
-[ext_resource type="Texture2D" uid="uid://u8ub8x0x3m78" path="res://assets/sprites/slime_purple.png" id="1_36s2t"]
-[ext_resource type="PackedScene" path="res://Scene/slow_zone.tscn" id="2_1258g"]
+[ext_resource type="PackedScene" uid="uid://d1qaox7x8ydq4" path="res://Scene/slow_zone.tscn" id="2_1258g"]
+[ext_resource type="Texture2D" uid="uid://bbaliasncbju2" path="res://assets/sprites/ice_ghost-ss.png" id="2_tt3w4"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j5ldy"]
-atlas = ExtResource("1_36s2t")
-region = Rect2(0, 48, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpf5j"]
+atlas = ExtResource("2_tt3w4")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2tybb"]
-atlas = ExtResource("1_36s2t")
-region = Rect2(24, 48, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_wol0u"]
+atlas = ExtResource("2_tt3w4")
+region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_glsdl"]
-atlas = ExtResource("1_36s2t")
-region = Rect2(48, 48, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f1ffp"]
-atlas = ExtResource("1_36s2t")
-region = Rect2(72, 48, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxtpx"]
+atlas = ExtResource("2_tt3w4")
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pkb61"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j5ldy")
+"texture": SubResource("AtlasTexture_dpf5j")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2tybb")
+"texture": SubResource("AtlasTexture_wol0u")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_glsdl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f1ffp")
+"texture": SubResource("AtlasTexture_bxtpx")
 }],
 "loop": true,
 "name": &"default",
@@ -45,22 +38,23 @@ size = Vector2(12, 14)
 
 [node name="EnemySlow" type="Node2D"]
 z_index = 4
+position = Vector2(48, 6)
 script = ExtResource("1_5d38d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pkb61")
 autoplay = "default"
-frame_progress = 0.288913
+frame_progress = 0.0474674
 
 [node name="RayCastUp" type="RayCast2D" parent="."]
 position = Vector2(0, 4)
-target_position = Vector2(0, -7)
+target_position = Vector2(1, -15)
 
 [node name="RayCastDown" type="RayCast2D" parent="."]
-target_position = Vector2(0, 12)
+target_position = Vector2(0, 14)
 
 [node name="SlowZone" parent="." instance=ExtResource("2_1258g")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SlowZone"]
-position = Vector2(0, 5)
+position = Vector2(-1, 2)
 shape = SubResource("RectangleShape2D_sn2wo")

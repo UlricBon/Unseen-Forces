@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="7_qo62p"]
 [ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="8_2fap7"]
 [ext_resource type="PackedScene" uid="uid://dig3meigja8lo" path="res://Scene/enemy.tscn" id="9_dp3w3"]
-[ext_resource type="PackedScene" uid="uid://b2q464lb515a0" path="res://Scene/enemy_slow.tscn" id="10_5yn3s"]
+[ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="10_5yn3s"]
 [ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="11_6u6sg"]
 [ext_resource type="Script" path="res://Scripts/FuelBar.gd" id="12_ppilb"]
 [ext_resource type="Texture2D" uid="uid://dtr433juu3hqd" path="res://assets/sprites/pbar.png" id="13_mlj05"]
@@ -1507,7 +1507,7 @@ sources/1 = SubResource("TileSetAtlasSource_6r1ll")
 sources/2 = SubResource("TileSetAtlasSource_jid3h")
 sources/0 = SubResource("TileSetAtlasSource_qvn2o")
 
-[node name="Game4" type="Node2D"]
+[node name="Game5" type="Node2D"]
 position = Vector2(303, 257)
 metadata/_edit_horizontal_guides_ = [-24.0]
 
@@ -1527,6 +1527,7 @@ layer_1/tile_data = PackedInt32Array(-786452, 196608, 1, -720916, 196608, 1, -65
 position = Vector2(-268, -81)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Torch" type="Node" parent="."]
@@ -1547,7 +1548,7 @@ position = Vector2(28, -221)
 position = Vector2(-76, -93)
 
 [node name="Enemy" parent="." instance=ExtResource("9_dp3w3")]
-position = Vector2(20, -141)
+position = Vector2(19, -148)
 
 [node name="EnemySlow" parent="." instance=ExtResource("10_5yn3s")]
 position = Vector2(-199, -221)

@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="7_8i2kt"]
 [ext_resource type="PackedScene" uid="uid://l54md4heenk7" path="res://Scene/match.tscn" id="8_xvan2"]
 [ext_resource type="PackedScene" uid="uid://dig3meigja8lo" path="res://Scene/enemy.tscn" id="9_evbm2"]
-[ext_resource type="PackedScene" uid="uid://b2q464lb515a0" path="res://Scene/enemy_slow.tscn" id="10_rdw6u"]
+[ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="10_rdw6u"]
 [ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="11_2ovdx"]
 [ext_resource type="Script" path="res://Scripts/FuelBar.gd" id="12_hypii"]
 [ext_resource type="Texture2D" uid="uid://dtr433juu3hqd" path="res://assets/sprites/pbar.png" id="13_pb56s"]
@@ -1672,7 +1672,7 @@ _data = {
 "platform4": SubResource("Animation_8cbj6")
 }
 
-[node name="Game4" type="Node2D"]
+[node name="Game5" type="Node2D"]
 position = Vector2(303, 257)
 
 [node name="GameManagerLevel5" type="Node" parent="."]
@@ -1691,6 +1691,7 @@ layer_1/tile_data = PackedInt32Array(-786452, 196608, 1, -720916, 196608, 1, -65
 position = Vector2(-277, -83)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Torch" type="Node" parent="."]
@@ -1714,16 +1715,16 @@ position = Vector2(238, 85)
 position = Vector2(-175, -187)
 
 [node name="Enemy" parent="." instance=ExtResource("9_evbm2")]
-position = Vector2(29, -221)
+position = Vector2(29, -228)
 
 [node name="EnemySlow" parent="." instance=ExtResource("10_rdw6u")]
 position = Vector2(-24, -78)
 
 [node name="EnemySlow2" parent="." instance=ExtResource("10_rdw6u")]
-position = Vector2(-135, -141)
+position = Vector2(-135, -99)
 
 [node name="EnemySlow3" parent="." instance=ExtResource("10_rdw6u")]
-position = Vector2(-230, -77)
+position = Vector2(-230, -79)
 
 [node name="Spike" parent="." instance=ExtResource("11_2ovdx")]
 position = Vector2(-10, -62)

@@ -1525,6 +1525,7 @@ layer_1/tile_data = PackedInt32Array(-786452, 262144, 2, -720916, 262144, 1, -65
 position = Vector2(-278, -149)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Torch" type="Node" parent="."]
@@ -1548,10 +1549,10 @@ position = Vector2(259, 117)
 position = Vector2(71, -220)
 
 [node name="Enemy" parent="." instance=ExtResource("9_rvmql")]
-position = Vector2(-295, -221)
+position = Vector2(-293, -228)
 
 [node name="Enemy2" parent="." instance=ExtResource("9_rvmql")]
-position = Vector2(20, -221)
+position = Vector2(-25, -228)
 
 [node name="Spike" parent="." instance=ExtResource("11_05c6s")]
 position = Vector2(-250, -78)

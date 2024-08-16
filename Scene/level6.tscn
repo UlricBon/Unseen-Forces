@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ttna23xdkl5g" path="res://assets/tiles/wood_tileset.png" id="4_b4d2s"]
 [ext_resource type="PackedScene" uid="uid://cnrcsph655rdh" path="res://Scene/player.tscn" id="5_e74s6"]
 [ext_resource type="PackedScene" uid="uid://cy2t1whtl6adu" path="res://Scene/torch/torch_scene.tscn" id="6_vcurb"]
-[ext_resource type="PackedScene" uid="uid://b2q464lb515a0" path="res://Scene/enemy_slow.tscn" id="9_r8gl3"]
+[ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="9_r8gl3"]
 [ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="10_rjjug"]
 [ext_resource type="Script" path="res://Scripts/FuelBar.gd" id="11_wkhn1"]
 [ext_resource type="Texture2D" uid="uid://dtr433juu3hqd" path="res://assets/sprites/pbar.png" id="12_fgqdv"]
@@ -1526,6 +1526,7 @@ layer_1/tile_data = PackedInt32Array(-786452, 262144, 2, -720916, 262144, 1, -65
 position = Vector2(-189, -195)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Torch" type="Node" parent="."]
@@ -1546,16 +1547,16 @@ position = Vector2(349, 152)
 position = Vector2(186, 118)
 
 [node name="EnemySlow" parent="." instance=ExtResource("9_r8gl3")]
-position = Vector2(-117, -111)
+position = Vector2(-117, -107)
 
 [node name="EnemySlow2" parent="." instance=ExtResource("9_r8gl3")]
-position = Vector2(-182, -77)
+position = Vector2(-182, -79)
 
 [node name="EnemySlow3" parent="." instance=ExtResource("9_r8gl3")]
-position = Vector2(-245, -111)
+position = Vector2(-245, -108)
 
 [node name="EnemySlow4" parent="." instance=ExtResource("9_r8gl3")]
-position = Vector2(-52, -78)
+position = Vector2(-52, -79)
 
 [node name="Spike22" parent="." instance=ExtResource("10_rjjug")]
 position = Vector2(-292, -244)
@@ -1679,7 +1680,7 @@ collision_mask = 2
 script = ExtResource("14_xfgpu")
 
 [node name="Enemy" parent="." instance=ExtResource("13_if4oh")]
-position = Vector2(-31, -77)
+position = Vector2(-31, -80)
 
 [node name="Match" parent="." instance=ExtResource("14_28633")]
 position = Vector2(-251, -224)
