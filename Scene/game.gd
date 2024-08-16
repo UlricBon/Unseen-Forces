@@ -10,7 +10,7 @@ func _process(delta):
 
 func _on_play_pressed():
 	get_tree().change_scene_to_file("res://Scene/level1.tscn")
-	Globals.start_timing()
+	Globals.start_timer()
 	pass # Replace with function body.
 
 func _on_controls_pressed():
