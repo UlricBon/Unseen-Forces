@@ -208,3 +208,4 @@ func _on_jump_buffer_timer_timeout():
 func _on_coyote_timer_timeout():
 	can_jump = false
 	pass # Replace with function body.
+		

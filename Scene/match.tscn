@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://l54md4heenk7"]
+[gd_scene load_steps=17 format=3 uid="uid://l54md4heenk7"]
 
 [ext_resource type="Script" path="res://Scripts/match.gd" id="1_rrcpg"]
 [ext_resource type="Texture2D" uid="uid://ne1nhtki2vom" path="res://assets/sprites/Match.png" id="2_ixjf5"]
+[ext_resource type="AudioStream" uid="uid://bbb8ux8tm0avc" path="res://assets/sfx/pickup_match.wav" id="3_xor23"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lfjuw"]
 atlas = ExtResource("2_ixjf5")
@@ -107,5 +108,9 @@ shape = SubResource("CircleShape2D_x6rnd")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_40v3w")
+
+[node name="PickSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_xor23")
+volume_db = -10.895
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
