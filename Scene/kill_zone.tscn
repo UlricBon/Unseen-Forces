@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cc4nn2j4odg13"]
 
 [ext_resource type="Script" path="res://Scripts/KillZone.gd" id="1_f4sot"]
-[ext_resource type="AudioStream" uid="uid://ctqtmdltq0d3k" path="res://assets/sfx/death.wav" id="2_k84bm"]
+[ext_resource type="AudioStream" uid="uid://ctqtmdltq0d3k" path="res://assets/sfx/death.wav" id="2_2pqao"]
 
 [node name="KillZone" type="Area2D"]
 script = ExtResource("1_f4sot")
@@ -11,7 +11,7 @@ wait_time = 1.5
 one_shot = true
 
 [node name="DeathSFX" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_k84bm")
+stream = ExtResource("2_2pqao")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

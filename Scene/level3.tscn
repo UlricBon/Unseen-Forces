@@ -1546,9 +1546,6 @@ position = Vector2(259, 117)
 [node name="Match" parent="." instance=ExtResource("8_oumyf")]
 position = Vector2(71, -220)
 
-[node name="Enemy" parent="." instance=ExtResource("9_rvmql")]
-position = Vector2(-293, -228)
-
 [node name="Enemy2" parent="." instance=ExtResource("9_rvmql")]
 position = Vector2(-25, -228)
 

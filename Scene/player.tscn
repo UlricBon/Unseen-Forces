@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cgbq2lkg4x8s7" path="res://Scene/light/Light.tscn" id="3_y8ec2"]
 [ext_resource type="Texture2D" uid="uid://cc82xvbdmgnco" path="res://assets/sprites/tallow_dead.png" id="4_m8m8g"]
 [ext_resource type="AudioStream" uid="uid://bib7qugxfd077" path="res://assets/sfx/wood_footstep.wav" id="5_236yo"]
-[ext_resource type="Texture2D" uid="uid://b40462075ryx2" path="res://Scene/FuelBar/fuelbar.png" id="6_4puhw"]
+[ext_resource type="Texture2D" uid="uid://bfpwcldjmg0pi" path="res://Scene/FuelBar/3xfuelbar.png" id="6_yihuq"]
 [ext_resource type="AudioStream" uid="uid://dpihw3c1x7p2k" path="res://assets/sfx/jump.wav" id="7_aqori"]
 [ext_resource type="AudioStream" uid="uid://byeh34aux5u8r" path="res://assets/sfx/burnout.wav" id="8_28q3a"]
 [ext_resource type="AudioStream" uid="uid://ctqtmdltq0d3k" path="res://assets/sfx/death.wav" id="9_cl1gt"]
@@ -404,12 +404,12 @@ wait_time = 0.1
 one_shot = true
 
 [node name="FuelBar" type="TextureProgressBar" parent="."]
-offset_left = -4.0
+offset_left = -12.0
 offset_top = -10.0862
-offset_right = 4.0
-offset_bottom = -9.08621
+offset_right = 12.0
+offset_bottom = -7.08621
 value = 100.0
-texture_progress = ExtResource("6_4puhw")
+texture_progress = ExtResource("6_yihuq")
 
 [node name="JumpSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_aqori")

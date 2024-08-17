@@ -1,14 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpr42seg0saw4"]
+[gd_scene load_steps=3 format=3 uid="uid://d1qaox7x8ydq4"]
 
 [ext_resource type="Script" path="res://Scripts/Slow Zone.gd" id="1_m3le8"]
-[ext_resource type="AudioStream" uid="uid://byeh34aux5u8r" path="res://assets/sfx/burnout.wav" id="2_yknn2"]
+[ext_resource type="AudioStream" uid="uid://byeh34aux5u8r" path="res://assets/sfx/burnout.wav" id="2_gl6u2"]
 
 [node name="SlowZone" type="Area2D"]
 collision_mask = 2
 script = ExtResource("1_m3le8")
 
 [node name="BurnoutSFX" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_yknn2")
-volume_db = -8.914
+stream = ExtResource("2_gl6u2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

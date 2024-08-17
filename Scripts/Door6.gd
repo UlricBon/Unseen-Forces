@@ -11,7 +11,6 @@ func _process(delta):
 	if game_manager_level_6.allTorchLit:
 		open.visible = true
 		close.visible = false
-		sprite_2d.visible = true
 		collision_shape_2d.disabled = false
 	if Input.is_action_just_pressed("Enter") and canEnter:
 		get_parent().get_node("CanvasLayer").get_node("Label").text = "Congrats, elapsed time is: " + str(Globals.get_elapsed_time())
@@ -20,10 +19,12 @@ func _process(delta):
 
 func _on_body_entered(body):
 	print("you are in")
+	sprite_2d.visible = true
 	canEnter = true
 		
 func _on_body_exited(body):
 	print("you are out")
+	sprite_2d.visible = false
 	canEnter = false
 
 func _change_scene():

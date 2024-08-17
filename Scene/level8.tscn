@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://wim6eyp7jh2m"]
+[gd_scene load_steps=17 format=3 uid="uid://wim6eyp7jh2m"]
 
 [ext_resource type="Script" path="res://Scripts/GameManagerLevel4.gd" id="1_inpam"]
 [ext_resource type="Texture2D" uid="uid://c4octcr4pxqhl" path="res://assets/tiles/wooden_tileset_2.png" id="2_nxh4e"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://dkefcueqxlmnm" path="res://Scene/enemy_slow.tscn" id="9_erf36"]
 [ext_resource type="PackedScene" uid="uid://rw8v4876e178" path="res://Scene/spike.tscn" id="10_18cgs"]
 [ext_resource type="Script" path="res://Scripts/Door4.gd" id="12_2ssll"]
-[ext_resource type="FontFile" uid="uid://8anobw07hrp1" path="res://fonts/PixelOperator8.ttf" id="13_l3l1a"]
 [ext_resource type="PackedScene" uid="uid://uclpnqd1fit4" path="res://Scene/door.tscn" id="13_wi2bt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qvn2o"]
@@ -1605,16 +1604,3 @@ position = Vector2(54, -62)
 position = Vector2(64, -219)
 collision_mask = 2
 script = ExtResource("12_2ssll")
-
-[node name="Label" type="Label" parent="."]
-z_index = 100
-offset_left = -289.0
-offset_top = -182.0
-offset_right = -228.0
-offset_bottom = -141.0
-theme_override_fonts/font = ExtResource("13_l3l1a")
-theme_override_font_sizes/font_size = 8
-text = "Some
-enemies
-can slow
-you"
