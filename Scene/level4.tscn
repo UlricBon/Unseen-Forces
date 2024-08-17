@@ -2143,6 +2143,7 @@ position = Vector2(68, -118)
 rotation = 10.9956
 
 [node name="Spike145" parent="." instance=ExtResource("11_6u6sg")]
+visible = false
 position = Vector2(68, -102)
 rotation = 10.9956
 
